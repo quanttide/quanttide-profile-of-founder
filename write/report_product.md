@@ -3,7 +3,7 @@ related_files:
   - think/content_idea_product.md
 ---
 
-# 写作内容：产品研发报告
+# 写作：产品研发报告
 
 ## 素材
 
