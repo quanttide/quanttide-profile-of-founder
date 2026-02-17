@@ -1,6 +1,6 @@
 # 量潮创始人档案
 
-本项目是创始人工作实录的文档库，以 Markdown 格式编写，使用 Jupyter Book 构建。
+本项目是创始人工作实录的文档库，以 MYST Markdown 格式编写，使用 Jupyter Book 构建。
 
 ## 格式规范
 
