@@ -5,6 +5,7 @@ parts:
   - caption: 思考
     chapters:
       - file: think/index.md
+      - file: think/README.md
       - file: think/agent.md
       - file: think/product.md
       - file: think/knowl.md
