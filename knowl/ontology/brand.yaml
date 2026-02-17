@@ -1,0 +1,24 @@
+ontology:
+  classes:
+    - name: Brand
+      description: "品牌资产，用于品牌构建或业务承载"
+      properties:
+        - name: strategic_purpose # 战略目的（属性类型：枚举）
+          type: enum
+          options:
+            ["Brand Building", "Product Development", "Personal Branding"]
+        - name: independent_business # 独立业务线（属性类型：布尔）
+          type: boolean
+        - name: business_distribution # 业务分布（属性类型：枚举）
+          type: enum
+          options: ["集中式", "分散式"]
+      relations:
+        - name: contains # 包含关系（指向Product类）
+          target_class: Product
+        - name: parallel_to # 并列关系（指向Brand或Product类）
+          target_class: [Brand, Product]
+        - name: aggregates # 聚合关系（指向具体业务活动实例）
+          target_class: BusinessActivity
+  # 可选：公理（领域规则）
+  axioms:
+    - "Brand可以同时是Product" # 示例规则

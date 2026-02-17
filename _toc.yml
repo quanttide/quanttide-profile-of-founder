@@ -32,6 +32,7 @@ parts:
   - caption: 知识
     chapters:
       - file: knowl/index.md
+      - file: knowl/README.md
       - file: knowl/agent.md
 
   - caption: 学习

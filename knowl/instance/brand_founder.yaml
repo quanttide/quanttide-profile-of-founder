@@ -1,0 +1,21 @@
+instances:
+  - name: 量潮创始人
+    class: Brand
+    properties:
+      strategic_purpose: "Business"
+      independent_business: false
+      business_distribution: "分散式"
+    relations:
+      - type: contains
+        target: 创始人(自然人) # 实例名称
+      - type: parallel_to
+        target: 量潮数据 # 实例名称
+      - type: aggregates
+        target: 量潮课堂 # 实例名称
+    maintenance:
+      current_maintainer: "张三" # 实例的维护者
+      upgrade_path:
+        - stage_name: "初步定义"
+          lead_role: "自然人"
+        - stage_name: "业务拆分"
+          lead_role: "法人"
