@@ -15,11 +15,14 @@
 ```
 .
 ├── index.md           # 首页（内容总览）
+├── README.md          # 格式规范与构建命令
 ├── _config.yml        # Jupyter Book 配置
 ├── _toc.yml           # 目录结构
-├── AGENTS.md          # Agent 操作指南
+├── AGENTS.md          # Agent 工作指南（元认知）
+├── ROADMAP.md         # 产品路线图（程序性记忆）
+├── CHANGELOG.md       # 版本变更记录（程序性记忆）
 ├── 板块名/            # 按主题划分的目录
-│   ├── README.md      # 板块介绍
+│   ├── index.md       # 板块内容摘要（陈述性记忆）
 │   └── *.md           # 具体文档
 └── _static/           # 静态资源（图片等）
 ```
