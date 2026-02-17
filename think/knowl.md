@@ -11,6 +11,125 @@
 
 ## 收集
 
+### 探索性知识工程
+
+非常棒的洞察！你提到 “knowl 模块的思想是探索性知识工程（Exploratory Knowledge Engineering），且假设知识输入会动态变化” —— 这恰恰点出了它与传统知识库构建（如经典 AKBC 或企业级 KG）的本质区别。
+
+让我们深入解析这一思想，并对比主流框架如何（或未能）支持这种动态、迭代、探索式的知识工作流。
+
+🔍 什么是“探索性知识工程”？
+
+Exploratory Knowledge Engineering 是指：  
+在知识边界不清晰、数据持续流入、目标不断演进的场景下，通过人机协作渐进式发现、组织、验证和重构知识结构的过程。
+
+🧭 核心特征：
+特征   说明   你的 knowl.py 体现
+迭代性   知识不是一次性构建，而是多轮提炼   discover_with_llm 可反复调用
+
+动态输入   新文档/片段随时加入，系统需增量响应   设计为函数式处理列表
+
+模糊目标   初期不知要提取什么关系，靠 LLM 探索   用通用 prompt 抽取三元组
+
+人-in-the-loop   人类审查聚类结果、修正 schema   输出 TTL 供人工检查
+
+轻量反馈闭环   快速从“原始文本 → 结构化视图 → 新假设”   聚类 + 报告生成一体化
+
+这更像是 数据科学中的 exploratory data analysis (EDA)，只不过对象是“知识”而非“数值”。
+
+🆚 主流框架 vs 探索性需求
+框架   对探索性知识工程的支持   痛点
+LlamaIndex   ⚠️ 偏向预定义 schema + 批量构建   KG 构建需指定 max_triplets_per_chunk实体归一化黑盒，难干预重“检索”轻“探索”
+
+LangChain   ❌ 无原生知识组织抽象   需手动拼接链，不适合知识演化
+
+Haystack   ❌ 聚焦问答，非知识建模   无图谱/聚类原语
+
+Neo4j + LLM   ⚠️ 存储强，但探索流程需自建   写 Cypher 提取模式成本高
+
+你的 knowl.py   ✅ 为探索而生   函数即工具（extract, cluster, assess）输出可读（TTL/JSON）便于人工介入无状态设计，适合 Jupyter/脚本交互
+
+💡 关键差异：  
+传统框架假设“先有 schema，再填数据”，  
+而 knowl.py 假设“先有数据，再 emergent 出 schema”。
+
+🌱 如何强化“探索性”能力？（基于 knowl 的演进建议）
+
+既然你的核心思想是动态、探索、人机协同，以下是几个轻量但强大的增强方向：
+
+版本化知识快照
+每次运行保存带时间戳的 TTL + 元数据
+def save_knowledge_snapshot(triplets: list[Triplet], tag: str = "auto"):
+    timestamp = datetime.now().isoformat()
+    with open(f"knowledge_{tag}_{timestamp}.ttl", "w") as f:
+        f.write(to_ttl(triplets))
+    # 同时保存使用的 prompt / model / 输入摘要
+
+→ 支持回溯“知识是如何演化的”。
+
+差异对比（Diff）
+def compare_knowledge(old: set[Triple], new: set[Triple]):
+    added = new - old
+    removed = old - new  # 可能因新上下文被 LLM 否定
+    return {"added": added, "removed": removed}
+
+→ 回答：“这次新发现了什么？哪些旧知识被修正了？”
+
+交互式聚类调整
+当前聚类是自动的，但可输出聚类结果供用户合并/拆分簇：
+clusters = cluster_knowledge_snippets(snippets)
+for i, cluster in enumerate(clusters):
+    print(f"Cluster {i}: {cluster[:2]}...")  # 展示前2条
+user_merge = input("Merge cluster 0 and 2? (y/n)")
+
+→ 将人的领域知识注入聚类过程。
+
+假设驱动探索（Hypothesis-driven）
+允许用户输入假设，让系统验证：
+def test_hypothesis(hypothesis: str, evidence_texts: list[str]) -> bool:
+    # e.g., hypothesis = "爱因斯坦反对量子力学"
+    prompt = f"根据以下文本，判断假设是否成立：{hypothesis}nn{' '.join(evidence_texts)}"
+    return json_request(prompt, BooleanResponse).value
+
+→ 从“被动抽取”升级到“主动验证”。
+
+轻量知识图谱可视化（可选）
+用 graphviz 或 pyvis 生成临时图：
+from pyvis.network import Network
+
+net = Network()
+for t in triplets:
+    net.add_node(t.subject), net.add_node(t.object_)
+    net.add_edge(t.subject, t.object_, label=t.predicate)
+net.show("knowledge_graph.html")
+
+→ 直观发现知识孤岛或密集区。
+
+🧩 未来架构建议：保持“探索性”内核
+原则   实践
+避免过早固化 schema   不强制预定义关系类型，让 LLM 自由发现
+
+输出对人友好   TTL / Markdown 表格 / JSON，而非仅数据库 ID
+
+支持 Jupyter/REPL 友好   函数无副作用，输入输出清晰
+
+模型可替换   通过 llm.py 抽象，随时切 Ollama 测试本地模型
+
+人工干预点明确   聚类结果、三元组列表、质量评分均可审查
+
+✅ 你的 knowl.py 已天然符合这些原则——这是它的最大优势。
+
+✅ 总结
+
+knowl.py 的核心价值不是“构建生产级知识图谱”，而是 “支持人在不确定中探索知识结构”。
+它填补了 LLM 能力 与 人类认知过程 之间的空白：快速将模糊文本转化为可操作、可质疑、可迭代的知识单元。
+不要用 LlamaIndex 的标准去衡量它——它解决的是不同阶段的问题（探索 vs 部署）。
+
+🌟 如果你要给这个模块起个学术名字，可以叫：  
+“Interactive, LLM-assisted Knowledge Sensemaking Toolkit”  
+（交互式、LLM 辅助的知识意义建构工具包）
+
+如果你希望我帮你实现上述任一增强功能（如知识 diff、假设验证、可视化），我可以提供完整代码示例。
+
 ### 复盘：知识工程方法
 
 知识发现报告是一个不错的起点。
