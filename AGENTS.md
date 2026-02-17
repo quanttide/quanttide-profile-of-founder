@@ -45,3 +45,14 @@
 3. 在 `index.md` 板块边界部分添加说明
 4. 在 `_toc.yml` 中注册
 5. 运行构建验证
+
+### 发布新版本
+
+1. **检查 CHANGELOG**：查看已有版本记录格式
+2. **更新 CHANGELOG**：在 `[Unreleased]` 下新增版本块，或创建新版本块
+3. **提交推送**：确保所有变更已推送到远程
+4. **创建 Release**：
+   ```bash
+   gh release create <version> --title "v<version>" --notes-file CHANGELOG.md --draft
+   ```
+5. **确认发布**：检查 Release 内容，移除 `--draft` 正式发布
