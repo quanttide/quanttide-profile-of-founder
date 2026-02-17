@@ -13,6 +13,7 @@ parts:
       - file: think/code.md
       - file: think/asset.md
       - file: think/iam.md
+      - file: think/ip.md
       - file: think/health.md
       - file: think/hr.md
       - file: think/devops.md

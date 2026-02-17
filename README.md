@@ -2,6 +2,10 @@
 
 本项目是创始人工作实录的文档库，以 MYST Markdown 格式编写，使用 Jupyter Book 构建。
 
+## 许可证
+
+本项目采用 [CC BY 4.0](LICENSE) 许可证。
+
 ## 格式规范
 
 ### 文件命名
