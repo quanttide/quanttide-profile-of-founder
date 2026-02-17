@@ -47,6 +47,7 @@ parts:
   - caption: 标准
     chapters:
       - file: stdn/index.md
+      - file: stdn/brand.md
       - file: stdn/data.md
       - file: stdn/product.md
       - file: stdn/think.md
