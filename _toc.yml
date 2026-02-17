@@ -4,7 +4,7 @@ root: index.md
 parts:
   - caption: 思考
     chapters:
-      - file: think/README.md
+      - file: think/index.md
       - file: think/agent.md
       - file: think/product.md
       - file: think/knowl.md
@@ -23,18 +23,18 @@ parts:
 
   - caption: 智能体
     chapters:
-      - file: agent/README.md
+      - file: agent/index.md
       - file: agent/think.md
       - file: agent/knowl.md
 
   - caption: 知识
     chapters:
-      - file: knowl/README.md
+      - file: knowl/index.md
       - file: knowl/agent.md
 
   - caption: 学习
     chapters:
-      - file: learn/README.md
+      - file: learn/index.md
       - file: learn/llm.md
       - file: learn/meta.md
       - file: learn/connect.md
@@ -43,7 +43,7 @@ parts:
 
   - caption: 标准
     chapters:
-      - file: stdn/README.md
+      - file: stdn/index.md
       - file: stdn/data.md
       - file: stdn/product.md
       - file: stdn/think.md
@@ -51,29 +51,29 @@ parts:
 
   - caption: 写作
     chapters:
-      - file: write/README.md
-      - file: write/content/README.md
+      - file: write/index.md
+      - file: write/content/index.md
       - file: write/content/report_product.md
       - file: write/content/report_brand.md
       - file: write/content/report_devops.md
-      - file: write/style/README.md
+      - file: write/style/index.md
       - file: write/style/fiction.md
 
   - caption: 代码
     chapters:
-      - file: code/README.md
+      - file: code/index.md
       - file: code/thera.md
       - file: code/qtadmin.md
 
   - caption: 品牌
     chapters:
-      - file: brand/README.md
+      - file: brand/index.md
       - file: brand/founder.md
       - file: brand/main.md
 
   - caption: 学术
     chapters:
-      - file: acad/README.md
+      - file: acad/index.md
       - file: acad/economics_base.md
       - file: acad/history_base.md
       - file: acad/web3_economics.md
@@ -81,7 +81,7 @@ parts:
 
   - caption: 产品
     chapters:
-      - file: product/README.md
-      - file: product/qtcloud/README.md
+      - file: product/index.md
+      - file: product/qtcloud/index.md
       - file: product/qtcloud/roadmap.md
       - file: product/qtcloud/feature.md
