@@ -25,39 +25,6 @@
 
 ---
 
-## 构建命令
-
-```bash
-# 构建 HTML
-jupyter-book build .
-
-# 构建并预览
-jupyter-book build . --builder htmlserve
-
-# 清理构建文件
-jupyter-book clean .
-```
-
----
-
-## 质量检查
-
-### Linting
-
-```bash
-markdownlint "**/*.md"
-```
-
-### 验证清单
-
-- [ ] 所有内部链接指向已存在的文件
-- [ ] `_toc.yml` 中引用的文件均已创建
-- [ ] YAML 文件语法正确
-- [ ] 新增文件已添加到 `_toc.yml`
-- [ ] 构建无错误
-
----
-
 ## 常见任务
 
 ### 添加新文档
