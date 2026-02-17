@@ -1,7 +1,37 @@
+# Jupyter Book Configuration
 # https://jupyterbook.org/en/stable/customize/config.html
-name: quanttide-example-of-documentation
-title: 量潮示例文档项目
-author: 量潮科技
-description: 量潮文档项目实例
-# Jupyter Book Config
-only_build_toc_files: true
+
+project:
+  name: quanttide-profile-of-founder
+  title: 量潮创始人档案
+  author: 量潮科技
+  description: 创始人工作实录文档库
+  copyright: "2026"
+  repository:
+    url: https://github.com/quanttide/quanttide-profile-of-founder
+    branch: main
+
+launch_buttons:
+  binderhub: false
+  jupyterhub: false
+  thebe: false
+  colab: false
+
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+  home_page_in_navbar: true
+  navbar_footer_text: "量潮科技"
+
+markdown:
+  markdown_extensions:
+    - mdx_math:
+        enable_dollar_delimiter: True
+
+sphinx:
+  build:
+    builder: html
+  extra_extensions:
+    - sphinx.ext.autodoc
+    - sphinx.ext.viewcode
