@@ -1,173 +1,76 @@
-# AGENTS.md - Agent Guidelines for quanttide-profile-of-founder
+# AGENTS.md - Agent 工作指南
 
-## Project Overview
+## 人机协作范式
 
-This is a **Jupyter Book documentation project** containing founder profile and knowledge management content. The project is written in Markdown and built using Jupyter Book.
+### 核心原则
 
-- **Project type**: Documentation site (Jupyter Book)
-- **Content language**: Chinese (Simplified)
-- **No Python code**: This is a pure documentation repository
+1. **最小干预**：仅在用户明确请求时操作，不主动修改非相关文件
+2. **信息复用**：优先使用已有文档内容，避免重复记录已知信息
+3. **验证优先**：完成修改后必须验证构建成功
+4. **原子提交**：每次提交应包含完整且独立的变更
+
+### 工作流程
+
+1. **理解需求**：明确用户的具体任务和范围
+2. **检查现状**：查看相关配置文件了解当前状态
+3. **执行操作**：按规范进行修改
+4. **验证结果**：运行构建命令确认无错误
+5. **提交推送**：创建提交并推送到远程
+
+### 权限边界
+
+- **可执行**：文档增删改、配置更新、README 更新
+- **需确认**：目录结构调整、新板块创建
+- **禁止**：修改 .gitignore、提交敏感文件
 
 ---
 
-## Build Commands
-
-### Build the Book
+## 构建命令
 
 ```bash
-# Build HTML version
+# 构建 HTML
 jupyter-book build .
 
-# Build and serve locally
+# 构建并预览
 jupyter-book build . --builder htmlserve
-```
 
-### Clean Build
-
-```bash
-# Clean previously built files
+# 清理构建文件
 jupyter-book clean .
 ```
 
-### Single Page Build (for faster iteration)
-
-```bash
-# Build specific file
-jupyter-book build . --page path/to/file.md
-```
-
 ---
 
-## Linting
+## 质量检查
 
-This project uses **Markdownlint** for Markdown files:
+### Linting
 
 ```bash
-# Install markdownlint-cli (if not present)
-npm install -g markdownlint-cli
-
-# Run linting
 markdownlint "**/*.md"
 ```
 
----
+### 验证清单
 
-## Testing
-
-No traditional code tests exist. For documentation quality:
-
-- Verify all internal links work: `jupyter-book build . --verbose`
-- Check table of contents validity in `_toc.yml`
-- Validate YAML syntax in config files
+- [ ] 所有内部链接指向已存在的文件
+- [ ] `_toc.yml` 中引用的文件均已创建
+- [ ] YAML 文件语法正确
+- [ ] 新增文件已添加到 `_toc.yml`
+- [ ] 构建无错误
 
 ---
 
-## Code Style Guidelines
+## 常见任务
 
-### Markdown Formatting
+### 添加新文档
 
-- Use ATX-style headers (`#`, `##`, `###`)
-- One blank line between block elements
-- Code blocks with language specifiers: ```python, ```bash, etc.
-- Use fenced code blocks instead of indented code
+1. 在对应目录下创建 `.md` 文件
+2. 更新该目录的 `README.md`
+3. 在 `_toc.yml` 中注册文件
+4. 运行构建验证
 
-### File Naming
+### 添加新板块
 
-- Use lowercase with hyphens: `my-section-name.md`
-- Use descriptive, SEO-friendly names
-- Directory names: lowercase, plural (e.g., `think/`, `knowl/`)
-
-### Content Structure (_toc.yml)
-
-- Use `jb-book` format
-- Use `parts` and `chapters` for hierarchical structure
-- Each file must exist before adding to TOC
-- Keep TOC depth reasonable (max 3-4 levels)
-
-### YAML Conventions (_config.yml, _toc.yml)
-
-- Use 2-space indentation
-- No tabs
-- Quote strings with special characters
-- Use lowercase for keys
-
-### Chinese Content
-
-- Use Chinese punctuation: `。`，`，`，`？`，`！`
-- No extra spaces between Chinese and English text
-- Use full-width characters where appropriate
-- Keep consistent terminology throughout
-
-### Internal Linking
-
-```markdown
-[Link Text](path/to/file.md)
-[Anchor Link](file.md#section-anchor)
-```
-
-### Images
-
-- Store in `_static/` directory
-- Use relative paths: `../_static/image.png` or `_static/image.png`
-- Optimize images before adding
-
----
-
-## Project Structure
-
-```
-.
-├── _config.yml          # Jupyter Book configuration
-├── _toc.yml             # Table of contents
-├── index.md             # Home page
-├── think/               # Thinking documents
-├── knowl/               # Knowledge documents
-├── code/                # Code-related docs
-├── write/               # Reports and writing
-├── stdn/                # Standards documents
-├── agent/               # Agent-related docs
-└── _static/             # Static assets (images, etc.)
-```
-
----
-
-## Error Handling
-
-- **Broken links**: Always verify links point to existing files
-- **TOC errors**: Ensure all files in `_toc.yml` exist
-- **Build errors**: Check YAML syntax, file paths, and image references
-- **Chinese encoding**: Ensure UTF-8 encoding for all files
-
----
-
-## Common Tasks
-
-### Adding a New Document
-
-1. Create the `.md` file in appropriate directory
-2. Add proper frontmatter if needed (title, etc.)
-3. Update `_toc.yml` to include the file
-4. Test build: `jupyter-book build .`
-
-### Updating Navigation
-
-Edit `_toc.yml` following the jb-book format. Remember:
-- Files must exist before adding to TOC
-- Test build after each TOC change
-
-### Local Preview
-
-```bash
-jupyter-book build . --builder htmlserve
-# Then open http://localhost:8000
-```
-
----
-
-## Notes for Agents
-
-- This is a documentation-only repository - do not add Python code
-- Always verify build succeeds after making changes
-- Maintain consistent Chinese terminology
-- Keep Markdown files well-structured and readable
-- Do not modify `_toc.yml` without ensuring all referenced files exist
+1. 创建目录（遵循命名规范：小写、复数）
+2. 创建 `README.md` 介绍板块内容
+3. 在 `index.md` 板块边界部分添加说明
+4. 在 `_toc.yml` 中注册
+5. 运行构建验证
