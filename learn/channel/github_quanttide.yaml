@@ -41,3 +41,19 @@ repositories:
     language: "Python 46.0%, C++ 21.4%, CMake 18.5%, Dart 9.4%"
     commits: 52
     recommended_reason: "管理后台项目，参考其架构和代码组织方式"
+
+  - name: "quanttide-profile-of-founder"
+    github_url: "https://github.com/quanttide/quanttide-profile-of-founder"
+    description: "量潮创始人档案 - 思维碎片与认知架构"
+    expertise:
+      - "知识管理"
+      - "AI"
+      - "个人知识库"
+    tags:
+      - "知识管理"
+      - "AI"
+      - "Markdown"
+      - "个人知识库"
+    language: "Markdown"
+    commits: 30
+    recommended_reason: "个人知识管理实践，AI 辅助知识整理的实验场"
