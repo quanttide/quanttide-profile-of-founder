@@ -2,7 +2,8 @@
 
 ## 相关文档
 
-- [贡献指南](CONTRIBUTING.md)
+- [贡献指南](CONTRIBUTING.md)（推荐贡献者阅读）
+- [README](README.md) - 格式规范与构建命令
 
 ## 项目概述
 
