@@ -4,24 +4,24 @@ root: index.md
 parts:
   - caption: 思考
     chapters:
-      - file: think/index.md
-      - file: think/README.md
-      - file: think/agent.md
-      - file: think/product.md
-      - file: think/knowl.md
-      - file: think/write.md
-      - file: think/stdn.md
-      - file: think/code.md
-      - file: think/asset.md
-      - file: think/iam.md
-      - file: think/ip.md
-      - file: think/health.md
-      - file: think/hr.md
-      - file: think/devops.md
-      - file: think/pr.md
-      - file: think/course.md
-      - file: think/org.md
-      - file: think/self.md
+      - file: think/content/index.md
+      - file: think/content/README.md
+      - file: think/content/agent.md
+      - file: think/content/product.md
+      - file: think/content/knowl.md
+      - file: think/content/write.md
+      - file: think/content/stdn.md
+      - file: think/content/code.md
+      - file: think/content/asset.md
+      - file: think/content/iam.md
+      - file: think/content/ip.md
+      - file: think/content/health.md
+      - file: think/content/hr.md
+      - file: think/content/devops.md
+      - file: think/content/pr.md
+      - file: think/content/course.md
+      - file: think/content/org.md
+      - file: think/content/self.md
 
   - caption: 智能体
     chapters:
