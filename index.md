@@ -14,10 +14,15 @@
 | [学习](learn/note/index.md) | 学习与成长，涵盖连接学习、LLM、元学习、写作等领域 |
 | [标准](stdn/index.md) | 各类标准化文档，统一思维、写作、产品等工作的规范 |
 | [写作](write/index.md) | 写作相关文档，包含内容管理和写作风格指导 |
+| [沟通](connect/index.md) | 对外沟通的数字化资产，记录沟通要点 |
 | [代码](code/index.md) | 技术项目代码库的文档记录 |
 | [品牌](brand/index.md) | 量潮品牌相关文档，记录创始人背景与品牌愿景 |
 | [学术](acad/index.md) | 学术知识，涵盖经济学、历史、Web3 等领域 |
 | [产品](product/index.md) | 产品相关文档，包含 QtCloud 等项目 |
+| [执行](execute/index.md) | 以目标为单位管理相关任务 |
+| [财务](finance/index.md) | 财务相关记录 |
+| [健康](health/index.md) | 健康管理相关记录 |
+| [议事](delib/index.md) | 议事规则与决策记录 |
 
 ### think 目录结构
 
