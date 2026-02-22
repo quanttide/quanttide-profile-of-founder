@@ -11,8 +11,8 @@
 ### 文件命名
 
 - 使用小写字母
-- 单词之间用连字符 `-` 分隔
-- 示例：`agent.md`、`product-roadmap.md`、`think-process.md`
+- 单词之间用下划线 `_` 分隔
+- 示例：`agent.md`、`product_roadmap.md`、`think_process.md`
 
 ### 目录结构
 
@@ -56,10 +56,15 @@
 | `learn/` | 学习 |
 | `stdn/` | 标准化 |
 | `write/` | 写作 |
+| `connect/` | 沟通 |
 | `code/` | 编程 |
 | `brand/` | 品牌管理 |
 | `acad/` | 学术研究 |
 | `product/` | 产品研发 |
+| `execute/` | 执行 |
+| `finance/` | 财务 |
+| `health/` | 健康 |
+| `delib/` | 议事 |
 
 ## 构建命令
 
