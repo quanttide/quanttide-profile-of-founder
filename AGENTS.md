@@ -108,10 +108,9 @@ jupyter-book toc pipeline .
 2. **更新 CHANGELOG**：在 `[Unreleased]` 下新增版本块
 3. **提交推送**：确保所有变更已推送到远程
 4. **创建 Release**：
-   ```bash
-   gh release create <version> --title "v<version>" --notes-file CHANGELOG.md --draft
-   ```
-5. **确认发布**：检查 Release 内容，移除 `--draft` 正式发布
+   - 草稿发布：`gh release create <version> --title "v<version>" --notes-file CHANGELOG.md --draft`
+   - 正式发布：`gh release edit <tag> --draft=false`
+5. **版本更正**：如需更正版本号，先删除旧草稿再创建新版本
 
 ---
 
