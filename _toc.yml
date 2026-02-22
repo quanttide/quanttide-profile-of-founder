@@ -26,23 +26,21 @@ parts:
   - caption: 智能体
     chapters:
       - file: agent/index.md
-      - file: agent/think.md
       - file: agent/knowl.md
 
   - caption: 知识
     chapters:
       - file: knowl/index.md
       - file: knowl/README.md
-      - file: knowl/agent.md
 
   - caption: 学习
     chapters:
-      - file: learn/index.md
-      - file: learn/llm.md
-      - file: learn/meta.md
-      - file: learn/connect.md
-      - file: learn/infra.md
-      - file: learn/write.md
+      - file: learn/note/index.md
+      - file: learn/note/llm.md
+      - file: learn/note/meta.md
+      - file: learn/note/connect.md
+      - file: learn/note/infra.md
+      - file: learn/note/write.md
 
   - caption: 标准
     chapters:
@@ -50,23 +48,17 @@ parts:
       - file: stdn/brand.md
       - file: stdn/data.md
       - file: stdn/product.md
-      - file: stdn/think.md
       - file: stdn/write.md
+      - file: stdn/agent.md
+      - file: stdn/knowl.md
 
   - caption: 写作
     chapters:
       - file: write/index.md
-      - file: write/content/index.md
-      - file: write/content/report_product.md
-      - file: write/content/report_brand.md
-      - file: write/content/report_devops.md
-      - file: write/style/index.md
-      - file: write/style/fiction.md
 
   - caption: 代码
     chapters:
       - file: code/index.md
-      - file: code/thera.md
       - file: code/qtadmin.md
 
   - caption: 品牌
