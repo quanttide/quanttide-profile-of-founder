@@ -9,22 +9,20 @@
 ### Jupyter Book 构建
 
 ```bash
-# 构建 HTML
-jb build .
+# 构建 HTML（单文件）
+jupyter-book build index.md --site
 
-# 或使用 jupyter-book build
-jupyter-book build .
+# 构建并预览
+jupyter-book start .
 
-# 仅构建指定文件（增量构建）
-jupyter-book build --path-output _build/html .
+# 清理构建文件
+jupyter-book clean .
 ```
 
-### 本地预览
+### 注意事项
 
-```bash
-# 启动 live server
-jupyter-book toc pipeline .
-```
+- jupyter-book 2.x 版本行为有变化，使用 `jupyter-book build .` 可能报 EISDIR 错误
+- 建议使用单文件构建：`jupyter-book build index.md --site`
 
 ---
 
@@ -152,3 +150,34 @@ think/
 ## 维护目标
 
 保留多样性和个人化作为智能体训练的原始素材。
+
+---
+
+## 复盘与总结
+
+### v0.0.3 工作复盘
+
+**完成内容：**
+
+1. **目录结构规范化**
+   - 重构 think 目录：新增 content/、framework/、pattern/ 子目录
+   - 统一文件命名：使用下划线 `_` 分隔单词
+
+2. **文档体系建设**
+   - 更新 think/content/index.md：添加目录结构说明
+   - 新建 knowl/index.md：知识板块入口
+   - 更新根目录 index.md 和 README.md：同步板块信息
+
+3. **配置优化**
+   - 简化 _toc.yml：移除不存在的文件引用，确保构建正常
+   - 验证 Jupyter Book 构建：确认单文件构建方式可行
+
+4. **流程完善**
+   - 更新发布流程：添加版本更正步骤（删除旧草稿再创建新版本）
+   - 更新 ROADMAP：标记已完成版本，添加下一步目标
+
+**经验教训：**
+
+- Jupyter Book 2.x 版本使用 `jupyter-book build .` 会报 EISDIR 错误，需使用单文件构建方式
+- 更新目录结构后需同步更新 index.md、README.md、_toc.yml 三处
+- 发布新版本前需确保 CHANGELOG 与实际变更一致
