@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-02-22
+
+### 探索期
+
+新增内容组织和构建规范。
+
+- 新增项目概述：明确基于 Jupyter Book 构建的文档项目性质
+- 新增构建命令：jb build、jupyter-book build、增量构建、本地预览
+- 新增文档编写规范：Markdown 风格、文件命名、目录结构
+- 重构 think 目录结构：从 think/*.md 迁移至 think/content/*.md
+- 新增 write/content/handbook_code.md：软件工程手册占位
+
 ## [0.0.2] - 2026-02-17
 
 ### 探索期
