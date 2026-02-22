@@ -2,8 +2,10 @@
 
 ## 相关文档
 
-- [贡献指南](CONTRIBUTING.md)（推荐贡献者阅读）
+- [贡献指南](CONTRIBUTING.md)（推荐贡献者阅读，**Agent 维护项目必读**）
 - [README](README.md) - 格式规范与构建命令
+
+> **提示**：Agent 维护项目时应经常参考 [CONTRIBUTING.md](CONTRIBUTING.md) 了解提交流规范和常见任务。
 
 ## 项目概述
 
