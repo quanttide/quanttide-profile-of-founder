@@ -22,11 +22,12 @@
 ├── README.md          # 格式规范与构建命令
 ├── _config.yml        # Jupyter Book 配置
 ├── _toc.yml           # 目录结构
-├── AGENTS.md          # Agent 工作指南（元认知）
-├── ROADMAP.md         # 产品路线图（程序性记忆）
-├── CHANGELOG.md       # 版本变更记录（程序性记忆）
+├── AGENTS.md          # Agent 工作指南
+├── ROADMAP.md         # 产品路线图
+├── CHANGELOG.md       # 版本变更记录
 ├── 板块名/            # 按主题划分的目录
-│   ├── index.md       # 板块内容摘要（陈述性记忆）
+│   ├── index.md       # 板块内容摘要
+│   ├── README.md      # 板块说明（可选）
 │   └── *.md           # 具体文档
 └── _static/           # 静态资源（图片等）
 ```
@@ -64,10 +65,10 @@
 
 ```bash
 # 构建 HTML
-jupyter-book build .
+jupyter-book build index.md --site
 
 # 构建并预览
-jupyter-book build . --builder htmlserve
+jupyter-book start .
 
 # 清理构建文件
 jupyter-book clean .
