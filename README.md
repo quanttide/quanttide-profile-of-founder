@@ -6,6 +6,10 @@
 
 本项目采用 [CC BY 4.0](LICENSE) 许可证。
 
+## 贡献指南
+
+欢迎贡献！详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
 ## 格式规范
 
 ### 文件命名
@@ -20,6 +24,7 @@
 .
 ├── index.md           # 首页（内容总览）
 ├── README.md          # 格式规范与构建命令
+├── CONTRIBUTING.md    # 贡献指南
 ├── _config.yml        # Jupyter Book 配置
 ├── _toc.yml           # 目录结构
 ├── AGENTS.md          # Agent 工作指南

@@ -1,5 +1,9 @@
 # AGENTS.md - Agent 工作指南
 
+## 相关文档
+
+- [贡献指南](CONTRIBUTING.md)
+
 ## 项目概述
 
 本项目是**量潮创始人档案**知识库，基于 Jupyter Book 构建的文档项目。非代码仓库，无需 lint/test 流程。
