@@ -19,13 +19,16 @@
 
 ### 0.0.2 ✅ 已完成
 
-- AGENTS 完善：版本规范、构建命令、文档编写规范
+- AGENTS 完善：版本规范、文档编写规范
 - 目录结构重构：think/content 分离框架和模式
+- 构建命令验证：jupyter-book 单文件构建
 
 ### 0.0.3 ✅ 已完成
 
-- AGENTS 完善：版本规范、构建命令、文档编写规范
-- 目录结构重构：think/content 分离框架和模式
+- 新增板块：数据(data/)、市场研究(mr/)、供应链(scm/)
+- 目录结构规范化：think/content、framework、pattern
+- 文档体系建设：knowl/index.md、mr/index.md、scm/README.md
+- 验证构建命令：确认单文件构建方式可行
 
 ### 0.0.4 - 0.0.x 目标
 

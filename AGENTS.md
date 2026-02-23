@@ -28,7 +28,7 @@ jupyter-book clean .
 
 ### 注意事项
 
-- jupyter-book 2.x 版本行为有变化，使用 `jupyter-book build .` 可能报 EISDIR 错误
+- jupyter-book 2.x 版本行为有变化，使用 `jupyter-book build .` 可能报 EISDIR 错误，建议使用单文件构建
 - 建议使用单文件构建：`jupyter-book build index.md --site`
 
 ---
@@ -41,7 +41,7 @@ jupyter-book clean .
 2. **信息复用**：优先使用已有文档内容，避免重复记录已知信息
 3. **查询 index**：每次维护前先查询相关 index.md 了解内容结构和关联
 4. **维护 index**：修改内容后同步更新对应 index.md 的内容摘要
-5. **验证优先**：完成修改后必须运行 `jupyter-book build .` 验证
+5. **验证优先**：完成修改后必须运行 `jupyter-book build index.md --site` 验证
 6. **原子提交**：每次提交应包含完整且独立的变更
 
 ### 文档规范
@@ -56,7 +56,7 @@ jupyter-book clean .
 3. **检查现状**：查看 _toc.yml 确认文件注册状态
 4. **执行操作**：按规范进行修改
 5. **更新 index**：同步更新相关 index.md 的内容摘要
-6. **验证结果**：运行 `jupyter-book build .` 确认无错误
+6. **验证结果**：运行 `jupyter-book build index.md --site` 确认无错误
 7. **提交推送**：创建提交并推送到远程
 
 ---
@@ -97,7 +97,7 @@ jupyter-book clean .
 1. 在对应目录下创建 `.md` 文件
 2. 更新该目录的 `index.md`
 3. 在 `_toc.yml` 中注册文件
-4. 运行 `jupyter-book build .` 验证
+4. 运行 `jupyter-book build index.md --site` 验证
 
 ### 添加新板块
 
@@ -185,6 +185,30 @@ think/
 
 **经验教训：**
 
-- Jupyter Book 2.x 版本使用 `jupyter-book build .` 会报 EISDIR 错误，需使用单文件构建方式
+- Jupyter Book 2.x 版本使用 `jupyter-book build .` 会报 EISDIR 错误，需使用单文件构建
 - 更新目录结构后需同步更新 index.md、README.md、_toc.yml 三处
 - 发布新版本前需确保 CHANGELOG 与实际变更一致
+
+### v0.0.4 工作复盘
+
+**完成内容：**
+
+1. **新增板块**
+   - 数据(data/)：数据工程与竞品分析
+   - 市场研究(mr/)：市场研究与竞品
+   - 供应链(scm/)：供应链管理与服务商协作
+
+2. **文档更新**
+   - 新建 mr/index.md：市场研究板块入口
+   - 更新 write/index.md：添加写作主题分类
+   - 更新 index.md：同步新增板块
+   - 更新 README.md：同步新增目录
+
+3. **AGENTS 更新**
+   - 统一构建命令为单文件构建：`jupyter-book build index.md --site`
+   - 更新验证命令说明
+
+**经验教训：**
+
+- 新增板块需要同步更新 index.md、README.md、AGENTS.md 三处
+- mr 目录需要同时维护 index.md 作为入口

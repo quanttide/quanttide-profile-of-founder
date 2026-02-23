@@ -23,6 +23,9 @@
 | [财务](finance/index.md) | 财务相关记录 |
 | [健康](health/index.md) | 健康管理相关记录 |
 | [议事](delib/index.md) | 议事规则与决策记录 |
+| [数据](data/bench.md) | 数据工程与竞品分析 |
+| [管理](mr/index.md) | 市场研究与竞品分析 |
+| [供应链](scm/README.md) | 供应链管理与服务商协作 |
 
 ### think 目录结构
 
