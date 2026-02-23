@@ -30,7 +30,15 @@
 - 文档体系建设：knowl/index.md、mr/index.md、scm/README.md
 - 验证构建命令：确认单文件构建方式可行
 
-### 0.0.4 - 0.0.x 目标
+### 0.0.4 ✅ 已完成
+
+- 新增板块：数据(data/)、市场研究(mr/)、供应链(scm/)
+- 目录结构规范化：think/content、framework、pattern
+- 文档体系建设：knowl/index.md、mr/index.md、scm/README.md
+- 验证构建命令：确认单文件构建方式可行
+- AGENTS 完善：统一构建命令、工作复盘
+
+### 0.0.5 目标
 
 - 验证碎片信息收集效率
 - 验证分类体系合理性
