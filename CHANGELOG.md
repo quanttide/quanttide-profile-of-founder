@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [0.0.5] - 2026-02-24
+
+### 探索期
+
+新增 fiction 网文板块，完善 asset 和 game 板块索引。
+
+- 新增 fiction/ 网文板块：职场言情、校园言情
+- 新增 asset/platform/index.md：平台资产主题索引
+- 新增 game/README.md：游戏板块说明
+
 ## [0.0.4] - 2026-02-23
 
 ### 探索期
