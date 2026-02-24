@@ -2,11 +2,24 @@
 
 ## 任务清单
 
-### 创始人写作素材整合示例模块
+### 写作模块
 
-仓库Guo-Zhang/thera-> quanttide/qtadmin
-模块src/thera/mode/knowl.py -> examples/founder/write.py
-目的：把这个程序用在创始人原稿加工到公司正式稿的写作流程。
+
+任务
+参考仓库Guo-Zhang/thera
+模块src/thera/mode/knowl.py
+和 tests/fixtures 的 十个 essay 示例，
+实现仓库quanttide/qtadmin的examples/write 文件夹
+
+功能：把这个程序用在创始人原稿加工到公司正式稿的写作流程。
+
 核心逻辑：
 1. 使用向量计算相似度联想
-2.  使用大模型出分析报告
+2.  使用知识卡片挖掘关键概念并重排，代替可读性较差的知识图谱
+3.  使用大模型出写作建议报告。
+
+后续任务：
+1. 根据 examples 结果固定 tests 和 fixtures。
+2.  根据 tests重构 src。
+3.  从 src 提炼领域知识到 packages，用以提交到正式的领域工具库中。
+ 
