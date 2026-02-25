@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## [0.0.6] - 2026-02-25
+
+### 探索期
+
+目录结构优化，新增 qtclass 课程板块和 think 内容。
+
+- qtclass 目录重组：batch→course, vip→train
+- 新增 qtclass/train/plan.md：培训计划
+- 新增 qtcloud/roadmap.md：产品路线图
+- 新增 think/content/：资产管理、组织 PR、供应链等主题
+- write 目录重组：content→default
+- 新增 write/default/report_connect.md：连接报告
+- 新增 write/essay/：随笔板块
+
 ## [0.0.5] - 2026-02-24
 
 ### 探索期
