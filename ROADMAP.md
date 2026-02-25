@@ -44,7 +44,17 @@
 - 新增 asset/platform/index.md
 - 新增 game/README.md
 
-### 0.0.6 目标
+### 0.0.6 ✅ 已完成
+
+- qtclass 目录重组：batch→course, vip→train
+- 新增 qtclass/train/plan.md：培训计划
+- 新增 qtcloud/roadmap.md：产品路线图
+- 新增 think/content/：资产管理、组织 PR、供应链等主题
+- write 目录重组：content→default
+- 新增 write/default/report_connect.md：连接报告
+- 新增 write/essay/：随笔板块
+
+### 0.0.7 目标
 
 - 验证碎片信息收集效率
 - 验证分类体系合理性
