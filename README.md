@@ -56,11 +56,21 @@
 | 目录 | 含义 |
 |------|------|
 | `think/` | 思考 |
+| `think/default/` | 默认主题笔记 |
+| `think/connect/` | 连接与协作 |
+| `think/hr/` | 人力资源 |
+| `think/qtclass/` | 培训项目 |
+| `think/qtdata/` | 数据相关 |
+| `think/self/` | 个人成长 |
+| `think/think/` | 思考与反思 |
+| `write/` | 写作 |
+| `write/default/` | 默认写作内容 |
+| `write/essay/` | 随笔 |
+| `write/report/` | 报告 |
 | `agent/` | 智能体工程 |
 | `knowl/` | 知识工程 |
 | `learn/` | 学习 |
 | `stdn/` | 标准化 |
-| `write/` | 写作 |
 | `connect/` | 沟通 |
 | `code/` | 编程 |
 | `brand/` | 品牌管理 |
