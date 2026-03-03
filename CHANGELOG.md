@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-03-03
+
+### 验证期
+
+大规模目录重构，优化文档结构。
+
+- think 目录重组：acad、data、strategy 子目录迁移
+- asset 目录新增：connect、delib、founder、stdn
+- write 目录重组：handbook、report 子目录
+- stdn 目录新增：stdn.md、think.md
+- learn/health 迁移至 learn 目录下
+
 ## [0.1.1] - 2026-03-02
 
 ### 验证期
