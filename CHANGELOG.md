@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-03-04
+
+### 验证期
+
+文档结构调整与内容润色。
+
+- 润色 delib/qtclass.md 议题描述
+- 重构目录结构：迁移 connect、调整 asset
+- 删除冗余文档：finance、learn/health、stdn、think/acad 等
+
 ## [0.2.0] - 2026-03-03
 
 ### 验证期
