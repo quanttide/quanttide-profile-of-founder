@@ -52,6 +52,7 @@ parts:
       - file: stdn/agent.md
       - file: stdn/knowl.md
       - file: stdn/strategy.md
+      - file: stdn/execute.md
 
   - caption: 写作
     chapters:
