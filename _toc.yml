@@ -95,4 +95,4 @@ parts:
 
   - caption: 元数据
     chapters:
-      - file: meta/index.md
+      - file: meta/README.md
