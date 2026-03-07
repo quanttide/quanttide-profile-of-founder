@@ -96,3 +96,5 @@ parts:
   - caption: 元数据
     chapters:
       - file: meta/README.md
+      - file: meta/index.md
+      - file: meta/self.md
