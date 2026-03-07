@@ -30,6 +30,7 @@
 | [数据](data/bench.md) | 数据工程与竞品分析 |
 | [管理](mr/index.md) | 市场研究与竞品分析 |
 | [供应链](scm/README.md) | 供应链管理与服务商协作 |
+| [战略](strategy/founder.md) | 创始人战略思考与战略目标 |
 
 ### think 目录结构
 

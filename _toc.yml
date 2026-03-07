@@ -51,10 +51,16 @@ parts:
       - file: stdn/write.md
       - file: stdn/agent.md
       - file: stdn/knowl.md
+      - file: stdn/strategy.md
 
   - caption: 写作
     chapters:
       - file: write/index.md
+      - file: write/report/index.md
+      - file: write/report/founder.md
+      - file: write/report/acad.md
+      - file: write/report/high_tech.md
+      - file: write/report/strategy.md
 
   - caption: 代码
     chapters:
@@ -81,3 +87,7 @@ parts:
       - file: product/qtcloud/index.md
       - file: product/qtcloud/roadmap.md
       - file: product/qtcloud/feature.md
+
+  - caption: 战略
+    chapters:
+      - file: strategy/founder.md
