@@ -1,0 +1,6 @@
+# 战略失败 · link notation
+# 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
+# 节点定义见 战略失败.ttl，条目原文见 战略失败.md
+
+战略失败 --evokes--> 信心的底色
+战略失败 --responds_to--> 回到虚构世界

@@ -1,0 +1,10 @@
+# 疏离 · link notation
+# 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
+# 节点定义见 疏离.ttl，条目原文见 疏离.md
+
+不确定是否合规 --evokes--> 疏离
+不确定是否合规 --responds_to--> 找合规来套
+自己不想看自己写的内容 --evokes--> 疏离
+自己不想看自己写的内容 --responds_to--> 修剪上下文
+疏离 --responds_to--> 修剪上下文
+找合规来套 --serves--> 合规是刚性边界
