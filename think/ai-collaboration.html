@@ -20,7 +20,9 @@
     --method: #059669;
     --method-bg: #d1fae5;
     --value: #7c3aed;
+    --value-bg: #ede9fe;
     --anti: #64748b;
+    --anti-bg: #f1f5f9;
   }
 
   * { box-sizing: border-box; }
@@ -55,7 +57,7 @@
 
   .subtitle {
     margin: 10px 0 0;
-    max-width: 760px;
+    max-width: 780px;
     color: var(--muted);
     font-size: 14px;
   }
@@ -98,6 +100,8 @@
   .swatch.event { background: var(--event-bg); border-color: var(--event); }
   .swatch.emotion { background: var(--emotion-bg); border-color: var(--emotion); }
   .swatch.method { background: var(--method-bg); border-color: var(--method); }
+  .swatch.value { background: var(--value-bg); border-color: var(--value); }
+  .swatch.anti { background: var(--anti-bg); border-color: var(--anti); }
 
   .graph-wrap {
     overflow-x: auto;
@@ -130,6 +134,8 @@
   .node.event rect { fill: var(--event-bg); stroke: var(--event); }
   .node.emotion rect { fill: var(--emotion-bg); stroke: var(--emotion); }
   .node.method rect { fill: var(--method-bg); stroke: var(--method); }
+  .node.value rect { fill: var(--value-bg); stroke: var(--value); }
+  .node.anti rect { fill: var(--anti-bg); stroke: var(--anti); }
 
   .node .kind {
     font-size: 10px;
@@ -141,6 +147,8 @@
   .node.event .kind { fill: #1e40af; }
   .node.emotion .kind { fill: #9d174d; }
   .node.method .kind { fill: #065f46; }
+  .node.value .kind { fill: #5b21b6; }
+  .node.anti .kind { fill: #334155; }
 
   .node .label {
     fill: var(--ink);
@@ -148,15 +156,15 @@
     font-weight: 600;
   }
 
-  .node {
-    cursor: pointer;
-  }
+  .node { cursor: pointer; }
 
   .node:hover rect,
-  .node.active rect {
+  .node.active rect,
+  .node:focus-visible rect {
     filter: drop-shadow(0 0 0.45rem rgba(79, 70, 229, .35));
   }
 
+  .node:focus { outline: none; }
   .node.dim { opacity: .28; }
 
   .edge path {
@@ -216,6 +224,8 @@
     font-size: 13px;
   }
 
+  details + details { margin-top: 10px; }
+
   summary {
     cursor: pointer;
     user-select: none;
@@ -245,25 +255,17 @@
     <p class="eyebrow">think / ai-collaboration</p>
     <h1>与 AI 协作 · 认知地图</h1>
     <p class="subtitle">
-      5 个节点、4 条边。节点类型来自 <code>ai-collaboration.ttl</code>，边来自
-      <code>ai-collaboration.lino</code>。左列是情境，中列是情绪，右列是方法；箭头表示态射方向。
+      数据源是 <code>ai-collaboration.ttl</code>：节点类型、标签与边都从 TTL 解析；
+      <code>ai-collaboration.lino</code> 是等价的边列表。左列是情境，中列是情绪，右列是方法。
     </p>
   </header>
 
-  <section class="legend" aria-label="图例">
-    <span class="legend-item"><span class="swatch trigger"></span>触发点 Trigger</span>
-    <span class="legend-item"><span class="swatch event"></span>事件 Event</span>
-    <span class="legend-item"><span class="swatch emotion"></span>情绪 Emotion</span>
-    <span class="legend-item"><span class="swatch method"></span>方法 Method</span>
-    <span class="legend-item">→ 唤起 evokes</span>
-    <span class="legend-item">→ 应对 responds_to</span>
-  </section>
+  <section class="legend" id="legend" aria-label="图例"></section>
 
   <div class="graph-wrap">
-    <svg id="graph" viewBox="0 0 1000 460" role="img"
-         aria-labelledby="graph-title graph-desc">
+    <svg id="graph" role="img" aria-labelledby="graph-title graph-desc">
       <title id="graph-title">与 AI 协作认知地图</title>
-      <desc id="graph-desc">触发点与事件指向情绪和方法的有向图。</desc>
+      <desc id="graph-desc">从 ai-collaboration.ttl 解析出的触发点、事件、情绪与方法有向图。</desc>
       <defs>
         <marker id="arrow-evokes" viewBox="0 0 10 10" refX="9" refY="5"
                 markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -282,11 +284,7 @@
           <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"></path>
         </marker>
       </defs>
-
-      <text class="column-label" x="240" y="34" text-anchor="middle">情境</text>
-      <text class="column-label" x="545" y="34" text-anchor="middle">情绪</text>
-      <text class="column-label" x="850" y="34" text-anchor="middle">方法</text>
-
+      <g id="headers"></g>
       <g id="edges"></g>
       <g id="nodes"></g>
     </svg>
@@ -296,100 +294,140 @@
     <p class="detail-kind">读法</p>
     <h2>从情境到方法</h2>
     <p>
-      「AI 变成纯粹执行者」唤起「失控与重新掌控」，并直接导向「刻意引导」；
-      「AI 用得不顺手」则直接导向「找上下文差异并显性化」。点击节点查看条目摘要。
+      箭头表示态射方向：触发点或事件唤起情绪，情境与情绪再导向方法。
+      悬停节点高亮相连的边，点击节点查看条目摘要。
     </p>
   </section>
 
   <details>
-    <summary>原始数据（ai-collaboration.lino）</summary>
-    <pre># 与 AI 协作 · link notation
-# 一行一条边：起点 --态射--&gt; 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
-# 节点定义见 ai-collaboration.ttl，条目原文见 ai-collaboration.md
+    <summary>ai-collaboration.ttl（可视化数据源）</summary>
+    <pre id="ttl-raw"></pre>
+  </details>
 
-AI_变成纯粹执行者 --evokes--&gt; 失控与重新掌控
-AI_变成纯粹执行者 --responds_to--&gt; 刻意引导
-失控与重新掌控 --responds_to--&gt; 刻意引导
-AI_用得不顺手 --responds_to--&gt; 找上下文差异并显性化</pre>
+  <details>
+    <summary>ai-collaboration.lino（等价的边列表）</summary>
+    <pre id="lino-raw"></pre>
   </details>
 </main>
 
+<script type="text/turtle" id="ttl-source">
+# 与 AI 协作 · 知识图谱
+#
+# 本体与态射定义见 index.ttl；条目原文见 ai-collaboration.md，边见 ai-collaboration.lino。
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix pf:   <urn:quanttide-context:default:profile:> .
+
+pf:AI_变成纯粹执行者 a pf:Trigger ;
+    rdfs:label "AI 变成纯粹执行者" ;
+    pf:evokes pf:失控与重新掌控 ;
+    pf:responds_to pf:刻意引导 .
+
+pf:失控与重新掌控 a pf:Emotion ;
+    rdfs:label "失控与重新掌控" ;
+    pf:responds_to pf:刻意引导 .
+
+pf:刻意引导 a pf:Method ;
+    rdfs:label "刻意引导" ;
+    pf:quote "刻意用提示词引导" .
+
+pf:AI_用得不顺手 a pf:Event ;
+    rdfs:label "AI 用得不顺手" ;
+    pf:responds_to pf:找上下文差异并显性化 .
+
+pf:找上下文差异并显性化 a pf:Method ;
+    rdfs:label "找上下文差异并显性化" .
+</script>
+
+<script type="text/plain" id="lino-source">
+# 与 AI 协作 · link notation
+# 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
+# 节点定义见 ai-collaboration.ttl，条目原文见 ai-collaboration.md
+
+AI_变成纯粹执行者 --evokes--> 失控与重新掌控
+AI_变成纯粹执行者 --responds_to--> 刻意引导
+失控与重新掌控 --responds_to--> 刻意引导
+AI_用得不顺手 --responds_to--> 找上下文差异并显性化
+</script>
+
 <script>
-  const nodes = [
-    {
-      id: "AI_变成纯粹执行者",
-      label: "AI 变成纯粹执行者",
-      kind: "trigger",
-      kindLabel: "触发点 Trigger",
-      x: 140, y: 110, w: 200, h: 64,
-      note: "感觉到 AI 只是执行者、被它牵着走时，关系会不舒服。",
-    },
-    {
-      id: "失控与重新掌控",
-      label: "失控与重新掌控",
-      kind: "emotion",
-      kindLabel: "情绪 Emotion",
-      x: 450, y: 110, w: 190, h: 64,
-      note: "刻意引导之后又能拉回来；「从被牵着走到重新掌控」是反复出现的模式。",
-    },
-    {
-      id: "刻意引导",
-      label: "刻意引导",
-      kind: "method",
-      kindLabel: "方法 Method",
-      x: 740, y: 80, w: 220, h: 64,
-      note: "刻意用提示词引导，把它拉回来——直到重新掌控才缓解。",
-    },
-    {
-      id: "AI_用得不顺手",
-      label: "AI 用得不顺手",
-      kind: "event",
-      kindLabel: "事件 Event",
-      x: 140, y: 340, w: 200, h: 64,
-      note: "AI 不顺手时先有情绪（「气」）。",
-    },
-    {
-      id: "找上下文差异并显性化",
-      label: "找上下文差异并显性化",
-      kind: "method",
-      kindLabel: "方法 Method",
-      x: 740, y: 340, w: 220, h: 64,
-      note: "先与气保持距离，再问「我和它的上下文差在哪」，把差异显性化说给它。",
-    },
-  ];
-
-  const edges = [
-    {
-      from: "AI_变成纯粹执行者", to: "失控与重新掌控",
-      type: "evokes", label: "唤起",
-      d: "M 340 142 L 450 142",
-      lx: 395, ly: 130,
-    },
-    {
-      from: "AI_变成纯粹执行者", to: "刻意引导",
-      type: "responds_to", label: "应对",
-      d: "M 340 126 C 470 50, 620 50, 740 96",
-      lx: 515, ly: 58,
-    },
-    {
-      from: "失控与重新掌控", to: "刻意引导",
-      type: "responds_to", label: "应对",
-      d: "M 640 142 C 685 142, 710 128, 740 112",
-      lx: 694, ly: 132,
-    },
-    {
-      from: "AI_用得不顺手", to: "找上下文差异并显性化",
-      type: "responds_to", label: "应对",
-      d: "M 340 372 L 740 372",
-      lx: 540, ly: 359,
-    },
-  ];
-
+  const KIND_ORDER = { Trigger: 0, Event: 0, Emotion: 1, Method: 2, Value: 3, Anti: 4 };
+  const KIND_LABEL = {
+    Trigger: "触发点", Event: "事件", Emotion: "情绪",
+    Method: "方法", Value: "价值", Anti: "排除形态", Object: "对象",
+  };
+  const COLUMN_LABEL = { 0: "情境", 1: "情绪", 2: "方法", 3: "价值", 4: "排除" };
+  const EDGE_LABEL = { evokes: "唤起", responds_to: "应对", serves: "服务于", excludes: "排除" };
   const SVG_NS = "http://www.w3.org/2000/svg";
-  const nodesLayer = document.getElementById("nodes");
-  const edgesLayer = document.getElementById("edges");
-  const detail = document.getElementById("detail");
-  const nodeById = new Map(nodes.map((n) => [n.id, n]));
+  const W = 220;
+  const H = 64;
+  const GAP_X = 90;
+  const TOP = 90;
+  const BOTTOM = 50;
+  const HEIGHT = 460;
+
+  function parseTurtle(source) {
+    const text = source
+      .split("\n")
+      .filter((line) => {
+        const trimmed = line.trim();
+        return trimmed
+          && !trimmed.startsWith("#")
+          && !trimmed.startsWith("@prefix")
+          && !/^PREFIX\b/i.test(trimmed);
+      })
+      .join("\n");
+
+    const nodes = new Map();
+    const edges = [];
+    const ensure = (id) => {
+      if (!nodes.has(id)) {
+        nodes.set(id, { id, label: id, kind: "Object", quote: "" });
+      }
+      return nodes.get(id);
+    };
+
+    for (const rawBlock of text.split(/\.\s*(?=\n|$)/)) {
+      const block = rawBlock.trim();
+      if (!block) continue;
+
+      let subject = null;
+      for (const rawPart of block.split(";")) {
+        const part = rawPart.trim();
+        if (!part) continue;
+
+        const type = part.match(/^pf:(\S+)\s+a\s+pf:(\w+)$/);
+        if (type) {
+          subject = type[1];
+          ensure(subject).kind = type[2];
+          continue;
+        }
+        if (!subject) continue;
+
+        const label = part.match(/^rdfs:label\s+"([^"]*)"$/);
+        if (label) {
+          ensure(subject).label = label[1];
+          continue;
+        }
+
+        const quote = part.match(/^pf:quote\s+"([^"]*)"$/);
+        if (quote) {
+          ensure(subject).quote = quote[1];
+          continue;
+        }
+
+        const edge = part.match(/^pf:(evokes|responds_to|serves|excludes)\s+pf:(\S+)$/);
+        if (edge) {
+          ensure(edge[2]);
+          edges.push({ from: subject, to: edge[2], type: edge[1] });
+        }
+      }
+    }
+
+    return { nodes: [...nodes.values()], edges };
+  }
 
   function el(name, attrs = {}) {
     const node = document.createElementNS(SVG_NS, name);
@@ -399,78 +437,172 @@ AI_用得不顺手 --responds_to--&gt; 找上下文差异并显性化</pre>
     return node;
   }
 
-  function renderEdges() {
-    for (const edge of edges) {
-      const group = el("g", { class: `edge ${edge.type}` });
-      group.dataset.from = edge.from;
-      group.dataset.to = edge.to;
-
-      group.appendChild(el("path", {
-        d: edge.d,
-        "marker-end": `url(#arrow-${edge.type})`,
-      }));
-
-      const label = el("text", {
-        class: "edge-label",
-        x: edge.lx,
-        y: edge.ly,
-      });
-      label.textContent = edge.label;
-      group.appendChild(label);
-
-      edge.el = group;
-      edgesLayer.appendChild(group);
-    }
+  function escapeHtml(value) {
+    return value.replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+    }[char]));
   }
 
-  function renderNodes() {
-    for (const node of nodes) {
-      const group = el("g", {
-        class: `node ${node.kind}`,
-        tabindex: "0",
-        role: "button",
-        "aria-label": `${node.kindLabel}：${node.label}`,
-      });
-      group.dataset.id = node.id;
+  const ttlSource = document.getElementById("ttl-source").textContent.trim();
+  const linoSource = document.getElementById("lino-source").textContent.trim();
+  document.getElementById("ttl-raw").textContent = ttlSource;
+  document.getElementById("lino-raw").textContent = linoSource;
 
-      group.appendChild(el("rect", {
-        x: node.x, y: node.y,
-        width: node.w, height: node.h,
-        rx: 10,
-      }));
+  const { nodes, edges } = parseTurtle(ttlSource);
+  const nodeById = new Map(nodes.map((node) => [node.id, node]));
 
-      const kind = el("text", {
-        class: "kind",
-        x: node.x + 14,
-        y: node.y + 21,
-      });
-      kind.textContent = node.kindLabel;
+  const groups = new Map();
+  for (const node of nodes) {
+    const rank = KIND_ORDER[node.kind] ?? 2;
+    node.rank = rank;
+    if (!groups.has(rank)) groups.set(rank, []);
+    groups.get(rank).push(node);
+  }
 
-      const label = el("text", {
-        class: "label",
-        x: node.x + 14,
-        y: node.y + 44,
-      });
-      label.textContent = node.label;
+  const ranks = [...groups.keys()].sort((a, b) => a - b);
+  let nextX = 60;
+  const columnX = new Map();
+  for (const rank of ranks) {
+    columnX.set(rank, nextX);
+    nextX += W + GAP_X;
+  }
+  const width = Math.max(1000, nextX - GAP_X + 60);
 
-      group.appendChild(kind);
-      group.appendChild(label);
+  const available = HEIGHT - TOP - BOTTOM;
+  for (const rank of ranks) {
+    const group = groups.get(rank).sort((a, b) => a.label.localeCompare(b.label, "zh"));
+    group.forEach((node, index) => {
+      node.x = columnX.get(rank);
+      node.y = group.length === 1
+        ? TOP + (available - H) / 2
+        : TOP + index * (available - H) / (group.length - 1);
+      node.w = W;
+      node.h = H;
+    });
+  }
 
-      group.addEventListener("mouseenter", () => highlight(node.id));
-      group.addEventListener("mouseleave", clearHighlight);
-      group.addEventListener("focus", () => highlight(node.id));
-      group.addEventListener("blur", clearHighlight);
-      group.addEventListener("click", () => showDetail(node.id));
-      group.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          showDetail(node.id);
-        }
-      });
+  const svg = document.getElementById("graph");
+  svg.setAttribute("viewBox", `0 0 ${width} ${HEIGHT}`);
 
-      node.el = group;
-      nodesLayer.appendChild(group);
+  const headersLayer = document.getElementById("headers");
+  for (const rank of ranks) {
+    const header = el("text", {
+      class: "column-label",
+      x: columnX.get(rank) + W / 2,
+      y: 34,
+      "text-anchor": "middle",
+    });
+    header.textContent = COLUMN_LABEL[rank] ?? "";
+    headersLayer.appendChild(header);
+  }
+
+  function edgeGeometry(edge) {
+    const source = nodeById.get(edge.from);
+    const target = nodeById.get(edge.to);
+    const sx = source.x + source.w;
+    const sy = source.y + source.h / 2;
+    const tx = target.x;
+    const ty = target.y + target.h / 2;
+
+    if (tx > sx) {
+      const dx = (tx - sx) * 0.42;
+      const lift = Math.max(0, target.rank - source.rank - 1) * 40;
+      const c1 = { x: sx + dx, y: sy - lift };
+      const c2 = { x: tx - dx, y: ty - lift };
+      return {
+        d: `M ${sx} ${sy} C ${c1.x} ${c1.y}, ${c2.x} ${c2.y}, ${tx} ${ty}`,
+        mid: {
+          x: (sx + 3 * c1.x + 3 * c2.x + tx) / 8,
+          y: (sy + 3 * c1.y + 3 * c2.y + ty) / 8,
+        },
+      };
     }
+
+    const lift = Math.min(sy, ty) - 55;
+    const c1 = { x: sx + 70, y: lift };
+    const c2 = { x: tx - 70, y: lift };
+    return {
+      d: `M ${sx} ${sy} C ${c1.x} ${c1.y}, ${c2.x} ${c2.y}, ${tx} ${ty}`,
+      mid: {
+        x: (sx + 3 * c1.x + 3 * c2.x + tx) / 8,
+        y: (sy + 3 * c1.y + 3 * c2.y + ty) / 8,
+      },
+    };
+  }
+
+  const edgesLayer = document.getElementById("edges");
+  for (const edge of edges) {
+    const group = el("g", { class: `edge ${edge.type}` });
+    group.dataset.from = edge.from;
+    group.dataset.to = edge.to;
+
+    const geometry = edgeGeometry(edge);
+    group.appendChild(el("path", {
+      d: geometry.d,
+      "marker-end": `url(#arrow-${edge.type})`,
+    }));
+
+    const title = document.createElementNS(SVG_NS, "title");
+    title.textContent = `${edge.from} --${edge.type}--> ${edge.to}`;
+    group.appendChild(title);
+
+    const label = el("text", {
+      class: "edge-label",
+      x: geometry.mid.x,
+      y: geometry.mid.y - 9,
+    });
+    label.textContent = EDGE_LABEL[edge.type] ?? edge.type;
+    group.appendChild(label);
+
+    edge.el = group;
+    edgesLayer.appendChild(group);
+  }
+
+  const nodesLayer = document.getElementById("nodes");
+  for (const node of nodes) {
+    const group = el("g", {
+      class: `node ${node.kind.toLowerCase()}`,
+      tabindex: "0",
+      role: "button",
+      "aria-label": `${KIND_LABEL[node.kind] ?? node.kind}：${node.label}`,
+    });
+    group.dataset.id = node.id;
+
+    group.appendChild(el("rect", {
+      x: node.x, y: node.y, width: node.w, height: node.h, rx: 10,
+    }));
+
+    const kind = el("text", {
+      class: "kind",
+      x: node.x + 14,
+      y: node.y + 21,
+    });
+    kind.textContent = `${KIND_LABEL[node.kind] ?? node.kind} ${node.kind}`;
+
+    const label = el("text", {
+      class: "label",
+      x: node.x + 14,
+      y: node.y + 44,
+    });
+    label.textContent = node.label;
+
+    group.appendChild(kind);
+    group.appendChild(label);
+
+    group.addEventListener("mouseenter", () => highlight(node.id));
+    group.addEventListener("mouseleave", clearHighlight);
+    group.addEventListener("focus", () => highlight(node.id));
+    group.addEventListener("blur", clearHighlight);
+    group.addEventListener("click", () => showDetail(node.id));
+    group.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        showDetail(node.id);
+      }
+    });
+
+    node.el = group;
+    nodesLayer.appendChild(group);
   }
 
   function connectedIds(id) {
@@ -496,26 +628,37 @@ AI_用得不顺手 --responds_to--&gt; 找上下文差异并显性化</pre>
   }
 
   function clearHighlight() {
-    for (const node of nodes) {
-      node.el.classList.remove("active", "dim");
-    }
-    for (const edge of edges) {
-      edge.el.classList.remove("active", "dim");
-    }
+    for (const node of nodes) node.el.classList.remove("active", "dim");
+    for (const edge of edges) edge.el.classList.remove("active", "dim");
   }
 
+  const detail = document.getElementById("detail");
   function showDetail(id) {
     const node = nodeById.get(id);
     if (!node) return;
+    const note = node.quote || "条目原文见 ai-collaboration.md 的对应小节。";
     detail.innerHTML = `
-      <p class="detail-kind">${node.kindLabel}</p>
-      <h2>${node.label}</h2>
-      <p>${node.note}</p>
+      <p class="detail-kind">${escapeHtml(KIND_LABEL[node.kind] ?? node.kind)} ${escapeHtml(node.kind)}</p>
+      <h2>${escapeHtml(node.label)}</h2>
+      <p>${escapeHtml(note)}</p>
     `;
   }
 
-  renderEdges();
-  renderNodes();
+  const legend = document.getElementById("legend");
+  for (const kind of ["Trigger", "Event", "Emotion", "Method", "Value", "Anti"]) {
+    if (!nodes.some((node) => node.kind === kind)) continue;
+    const item = document.createElement("span");
+    item.className = "legend-item";
+    item.innerHTML = `<span class="swatch ${kind.toLowerCase()}"></span>${KIND_LABEL[kind]} ${kind}`;
+    legend.appendChild(item);
+  }
+  for (const [type, label] of Object.entries(EDGE_LABEL)) {
+    if (!edges.some((edge) => edge.type === type)) continue;
+    const item = document.createElement("span");
+    item.className = "legend-item";
+    item.textContent = `→ ${label} ${type}`;
+    legend.appendChild(item);
+  }
 </script>
 </body>
 </html>
