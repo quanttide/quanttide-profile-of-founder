@@ -1,8 +1,7 @@
-# 紧张与高压 · link notation
+# 睡醒时的千头万绪 · link notation
 # 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
-# 节点定义见 tension.ttl，条目原文见 tension.md
+# 节点定义见 waking-thoughts.ttl，条目原文见 waking-thoughts.md
 
 睡醒时的千头万绪 --evokes--> 高压与喘息
 睡醒时的千头万绪 --responds_to--> 装进框架
-进度停滞 --evokes--> 高压与喘息
 高压与喘息 --responds_to--> 补觉与放手

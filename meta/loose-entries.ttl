@@ -87,6 +87,43 @@ pf:quote a rdf:Property ;
 # 触发点 —— profile/triggers.md
 ########################################
 
+pf:厌倦与熟练 a pf:Emotion ;
+    rdfs:label "厌倦与熟练" ;
+    pf:file "emotions.md" ;
+    pf:responds_to pf:从依赖个人到依赖规则 .
+
+pf:从依赖个人到依赖规则 a pf:Method ;
+    rdfs:label "从依赖个人到依赖规则" ;
+    pf:file "methods.md" ;
+    pf:group "思维框架" .
+
+pf:带人必须有商业收益 a pf:Value ;
+    rdfs:label "带人必须有商业收益" ;
+    pf:file "values.md" ;
+    pf:excludes pf:无收益的一对一投入 .
+
+pf:无收益的一对一投入 a pf:Anti ;
+    rdfs:label "无收益的一对一投入" ;
+    pf:file "values.md" .
+
+pf:交给标准化 a pf:Method ;
+    rdfs:label "交给标准化" ;
+    pf:file "methods.md" ;
+    pf:group "应对策略" ;
+    pf:serves pf:标准化才配走公司流程 .
+
+# 以下两条方法仅以描述出现在 triggers.md，未独立成节
+
+pf:标准化才配走公司流程 a pf:Value ;
+    rdfs:label "标准化才配走公司流程" ;
+    pf:file "values.md" ;
+    pf:excludes pf:个人化表达硬塞进组织流程 .
+
+pf:个人化表达硬塞进组织流程 a pf:Anti ;
+    rdfs:label "个人化表达硬塞进组织流程" ;
+    pf:file "values.md" ;
+    pf:quote "把个人化的表达硬塞进组织流程" .
+
 pf:非商业化与商业化切开 a pf:Method ;
     rdfs:label "非商业化与商业化切开" ;
     pf:file "methods.md" ;

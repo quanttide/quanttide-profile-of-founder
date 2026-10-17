@@ -1,6 +1,6 @@
-# 规模的拉扯 · link notation
+# 范围失控 · link notation
 # 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
-# 节点定义见 scale.ttl，条目原文见 scale.md
+# 节点定义见 scope-overrun.ttl，条目原文见 scope-overrun.md
 
 范围失控 --evokes--> 规模焦虑
 范围失控 --responds_to--> 缩小窗口

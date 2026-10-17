@@ -1,21 +1,21 @@
 # meta 议题档案 · 框架
 
-> 从 `default/` 的五类档案按**个人议题**重组（`default/` 已清理，基线见 `git show f4013d1:…`）：一议题一组，每组三种格式——`.md` 条目原文、`.lino` 链接记法（一行一条边）、`.ttl` 图谱节点与态射；本组 `index.*` 概括框架。
+> 从 `default/` 的五类档案按**情境**（触发点）重组——一个情境一组，情绪 / 方法 / 价值挂在它所处的情境下，挂不上情境的进 `loose-entries`（`default/` 已清理，基线 `git show f4013d1:…`）：一议题一组，每组三种格式——`.md` 条目原文、`.lino` 链接记法（一行一条边）、`.ttl` 图谱节点与态射；本组 `index.*` 概括框架。
 
-## 议题组一览
+## 情境组一览
 
-| 文件 | 议题 | md 条目 | 图谱节点 | 组内边 |
+| 文件 | 情境 | md 条目 | 图谱节点 | 组内边 |
 |:--|:--|--:|--:|--:|
-| `tension.md` | 紧张与高压 | 3 | 5 | 4 |
+| `waking-thoughts.md` | 睡醒时的千头万绪 | 2 | 4 | 3 |
 | `strategic-failure.md` | 战略失败 | 2 | 3 | 2 |
-| `ai-relations.md` | AI 关系 | 2 | 3 | 3 |
-| `scale.md` | 规模的拉扯 | 4 | 6 | 6 |
-| `alienation.md` | 疏离 | 4 | 6 | 6 |
-| `weariness.md` | 厌倦 | 3 | 4 | 2 |
-| `value-lines.md` | 价值线 | 1 | 3 | 2 |
-| `loose-entries.md` | 还散着的条目 | 9 | 10 | 0 |
+| `stalled-progress.md` | 进度停滞 | 1 | 1 | 0 |
+| `ai-as-executor.md` | AI 变成纯粹执行者 | 2 | 3 | 3 |
+| `scope-overrun.md` | 范围失控 | 4 | 6 | 6 |
+| `compliance-doubt.md` | 不确定是否合规 | 3 | 4 | 3 |
+| `unread-own-content.md` | 自己不想看自己写的内容 | 1 | 2 | 1 |
+| `loose-entries.md` | 不系于情境的条目 | 13 | 17 | 4 |
 
-合计：8 组 / 图谱节点 40（与 `default/index.ttl` 的节点数一致）/ 组内边 25 + 跨组边 1。
+合计：8 组 / 图谱节点 40（与 `default/index.ttl` 的节点数一致）/ 组内边 22 + 跨组边 4。
 
 ## 守恒与核对
 

@@ -95,40 +95,43 @@ pf:IssueGroup a rdfs:Class ;
     rdfs:label "议题组" ;
     rdfs:comment "个人议题为单位的档案组，见同名 md / lino / ttl。" .
 
-pf:tension a pf:IssueGroup ;
-    rdfs:label "紧张与高压" ;
-    pf:source "default/index.md#紧张与高压" ;
-    pf:nodes 5 .
+pf:waking-thoughts a pf:IssueGroup ;
+    rdfs:label "睡醒时的千头万绪" ;
+    pf:source "default/index.md#睡醒时的千头万绪" ;
+    pf:nodes 4 .
 pf:strategic-failure a pf:IssueGroup ;
     rdfs:label "战略失败" ;
     pf:source "default/index.md#战略失败" ;
     pf:nodes 3 .
-pf:ai-relations a pf:IssueGroup ;
-    rdfs:label "AI 关系" ;
-    pf:source "default/index.md#AI 关系" ;
+pf:stalled-progress a pf:IssueGroup ;
+    rdfs:label "进度停滞" ;
+    pf:source "default/index.md#进度停滞" ;
+    pf:nodes 1 .
+pf:ai-as-executor a pf:IssueGroup ;
+    rdfs:label "AI 变成纯粹执行者" ;
+    pf:source "default/index.md#AI 变成纯粹执行者" ;
     pf:nodes 3 .
-pf:scale a pf:IssueGroup ;
-    rdfs:label "规模的拉扯" ;
-    pf:source "default/index.md#规模的拉扯" ;
+pf:scope-overrun a pf:IssueGroup ;
+    rdfs:label "范围失控" ;
+    pf:source "default/index.md#范围失控" ;
     pf:nodes 6 .
-pf:alienation a pf:IssueGroup ;
-    rdfs:label "疏离" ;
-    pf:source "default/index.md#疏离" ;
-    pf:nodes 6 .
-pf:weariness a pf:IssueGroup ;
-    rdfs:label "厌倦" ;
-    pf:source "default/index.md#厌倦" ;
+pf:compliance-doubt a pf:IssueGroup ;
+    rdfs:label "不确定是否合规" ;
+    pf:source "default/index.md#不确定是否合规" ;
     pf:nodes 4 .
-pf:value-lines a pf:IssueGroup ;
-    rdfs:label "价值线" ;
-    pf:source "default/index.md#价值线" ;
-    pf:nodes 3 .
+pf:unread-own-content a pf:IssueGroup ;
+    rdfs:label "自己不想看自己写的内容" ;
+    pf:source "default/index.md#自己不想看自己写的内容" ;
+    pf:nodes 2 .
 pf:loose-entries a pf:IssueGroup ;
-    rdfs:label "还散着的条目" ;
-    pf:source "default/index.md#还散着的条目" ;
-    pf:nodes 10 .
+    rdfs:label "不系于情境的条目" ;
+    pf:source "default/index.md#不系于情境的条目" ;
+    pf:nodes 17 .
 
 ########################################
 # 跨组的边（节点定义在各自组的 ttl）
 ########################################
+pf:进度停滞 pf:evokes pf:高压与喘息 .
 pf:进度停滞 pf:responds_to pf:回到虚构世界 .
+pf:自己不想看自己写的内容 pf:evokes pf:疏离 .
+pf:疏离 pf:responds_to pf:修剪上下文 .

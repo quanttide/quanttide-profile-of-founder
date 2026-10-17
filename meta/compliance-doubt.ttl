@@ -87,29 +87,23 @@ pf:quote a rdf:Property ;
 # 触发点 —— profile/triggers.md
 ########################################
 
-pf:睡醒时的千头万绪 a pf:Trigger ;
-    rdfs:label "睡醒时的千头万绪" ;
+pf:不确定是否合规 a pf:Trigger ;
+    rdfs:label "不确定是否合规" ;
     pf:file "triggers.md" ;
-    pf:evokes pf:高压与喘息 ;
-    pf:responds_to pf:装进框架 .
+    pf:evokes pf:疏离 ;
+    pf:responds_to pf:找合规来套 .
 
-pf:进度停滞 a pf:Trigger ;
-    rdfs:label "进度停滞" ;
-    pf:file "triggers.md" ;
-    pf:evokes pf:高压与喘息 ;
-    pf:responds_to pf:回到虚构世界 .
-
-pf:高压与喘息 a pf:Emotion ;
-    rdfs:label "高压与喘息" ;
+pf:疏离 a pf:Emotion ;
+    rdfs:label "疏离" ;
     pf:file "emotions.md" ;
-    pf:responds_to pf:补觉与放手 .
+    pf:responds_to pf:修剪上下文 .
 
-pf:装进框架 a pf:Method ;
-    rdfs:label "装进框架" ;
+pf:找合规来套 a pf:Method ;
+    rdfs:label "找合规来套" ;
     pf:file "methods.md" ;
-    pf:group "应对策略" .
+    pf:group "应对策略" ;
+    pf:serves pf:合规是刚性边界 .
 
-pf:补觉与放手 a pf:Method ;
-    rdfs:label "补觉与放手" ;
-    pf:file "methods.md" ;
-    pf:group "应对策略" .
+pf:合规是刚性边界 a pf:Value ;
+    rdfs:label "合规是刚性边界" ;
+    pf:file "values.md" .

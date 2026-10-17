@@ -87,21 +87,23 @@ pf:quote a rdf:Property ;
 # 触发点 —— profile/triggers.md
 ########################################
 
-pf:厌倦与熟练 a pf:Emotion ;
-    rdfs:label "厌倦与熟练" ;
+pf:睡醒时的千头万绪 a pf:Trigger ;
+    rdfs:label "睡醒时的千头万绪" ;
+    pf:file "triggers.md" ;
+    pf:evokes pf:高压与喘息 ;
+    pf:responds_to pf:装进框架 .
+
+pf:高压与喘息 a pf:Emotion ;
+    rdfs:label "高压与喘息" ;
     pf:file "emotions.md" ;
-    pf:responds_to pf:从依赖个人到依赖规则 .
+    pf:responds_to pf:补觉与放手 .
 
-pf:从依赖个人到依赖规则 a pf:Method ;
-    rdfs:label "从依赖个人到依赖规则" ;
+pf:装进框架 a pf:Method ;
+    rdfs:label "装进框架" ;
     pf:file "methods.md" ;
-    pf:group "思维框架" .
+    pf:group "应对策略" .
 
-pf:带人必须有商业收益 a pf:Value ;
-    rdfs:label "带人必须有商业收益" ;
-    pf:file "values.md" ;
-    pf:excludes pf:无收益的一对一投入 .
-
-pf:无收益的一对一投入 a pf:Anti ;
-    rdfs:label "无收益的一对一投入" ;
-    pf:file "values.md" .
+pf:补觉与放手 a pf:Method ;
+    rdfs:label "补觉与放手" ;
+    pf:file "methods.md" ;
+    pf:group "应对策略" .

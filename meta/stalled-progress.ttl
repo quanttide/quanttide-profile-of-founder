@@ -87,20 +87,8 @@ pf:quote a rdf:Property ;
 # 触发点 —— profile/triggers.md
 ########################################
 
-pf:交给标准化 a pf:Method ;
-    rdfs:label "交给标准化" ;
-    pf:file "methods.md" ;
-    pf:group "应对策略" ;
-    pf:serves pf:标准化才配走公司流程 .
-
-# 以下两条方法仅以描述出现在 triggers.md，未独立成节
-
-pf:标准化才配走公司流程 a pf:Value ;
-    rdfs:label "标准化才配走公司流程" ;
-    pf:file "values.md" ;
-    pf:excludes pf:个人化表达硬塞进组织流程 .
-
-pf:个人化表达硬塞进组织流程 a pf:Anti ;
-    rdfs:label "个人化表达硬塞进组织流程" ;
-    pf:file "values.md" ;
-    pf:quote "把个人化的表达硬塞进组织流程" .
+pf:进度停滞 a pf:Trigger ;
+    rdfs:label "进度停滞" ;
+    pf:file "triggers.md" ;
+    pf:evokes pf:高压与喘息 ;
+    pf:responds_to pf:回到虚构世界 .

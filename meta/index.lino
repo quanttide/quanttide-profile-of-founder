@@ -2,13 +2,16 @@
 # 框架：每组一议题，三格式齐全；本文件只记跨组的边与各组入口。
 # 一行一条边：起点 --态射--> 终点
 
-# 紧张与高压 (tension): 5 节点 → tension.md / tension.lino / tension.ttl
+# 睡醒时的千头万绪 (waking-thoughts): 4 节点 → waking-thoughts.md / waking-thoughts.lino / waking-thoughts.ttl
 # 战略失败 (strategic-failure): 3 节点 → strategic-failure.md / strategic-failure.lino / strategic-failure.ttl
-# AI 关系 (ai-relations): 3 节点 → ai-relations.md / ai-relations.lino / ai-relations.ttl
-# 规模的拉扯 (scale): 6 节点 → scale.md / scale.lino / scale.ttl
-# 疏离 (alienation): 6 节点 → alienation.md / alienation.lino / alienation.ttl
-# 厌倦 (weariness): 4 节点 → weariness.md / weariness.lino / weariness.ttl
-# 价值线 (value-lines): 3 节点 → value-lines.md / value-lines.lino / value-lines.ttl
-# 还散着的条目 (loose-entries): 10 节点 → loose-entries.md / loose-entries.lino / loose-entries.ttl
+# 进度停滞 (stalled-progress): 1 节点 → stalled-progress.md / stalled-progress.lino / stalled-progress.ttl
+# AI 变成纯粹执行者 (ai-as-executor): 3 节点 → ai-as-executor.md / ai-as-executor.lino / ai-as-executor.ttl
+# 范围失控 (scope-overrun): 6 节点 → scope-overrun.md / scope-overrun.lino / scope-overrun.ttl
+# 不确定是否合规 (compliance-doubt): 4 节点 → compliance-doubt.md / compliance-doubt.lino / compliance-doubt.ttl
+# 自己不想看自己写的内容 (unread-own-content): 2 节点 → unread-own-content.md / unread-own-content.lino / unread-own-content.ttl
+# 不系于情境的条目 (loose-entries): 17 节点 → loose-entries.md / loose-entries.lino / loose-entries.ttl
 
-进度停滞 --responds_to--> 回到虚构世界   # 紧张与高压 → 战略失败
+进度停滞 --evokes--> 高压与喘息   # 进度停滞 → 睡醒时的千头万绪
+进度停滞 --responds_to--> 回到虚构世界   # 进度停滞 → 战略失败
+自己不想看自己写的内容 --evokes--> 疏离   # 自己不想看自己写的内容 → 不确定是否合规
+疏离 --responds_to--> 修剪上下文   # 不确定是否合规 → 自己不想看自己写的内容
