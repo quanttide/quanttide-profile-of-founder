@@ -1,0 +1,7 @@
+# 文件成了垃圾堆 · link notation
+# 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
+# 节点定义见 messy-files.ttl，条目原文见 messy-files.md
+
+混乱 --evokes--> 崩溃与重整
+混乱 --responds_to--> 定关键下一步
+崩溃与重整 --responds_to--> 定关键下一步

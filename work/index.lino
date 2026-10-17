@@ -1,0 +1,17 @@
+# index · link notation
+# 框架：每组一事件，三格式齐全；本文件只记跨组的边与各组入口。
+# 一行一条边：起点 --态射--> 终点
+
+# 目标完成又冒出新需求 (new-requirements): 3 节点 → new-requirements.md / new-requirements.lino / new-requirements.ttl
+# 供需双方都卡住 (stuck-both-sides): 1 节点 → stuck-both-sides.md / stuck-both-sides.lino / stuck-both-sides.ttl
+# 文件成了垃圾堆 (messy-files): 3 节点 → messy-files.md / messy-files.lino / messy-files.ttl
+# AI 用得不顺手 (ai-friction): 3 节点 → ai-friction.md / ai-friction.lino / ai-friction.ttl
+# 大转型期 (transition): 2 节点 → transition.md / transition.lino / transition.ttl
+# 想法不断冒出 (idea-influx): 1 节点 → idea-influx.md / idea-influx.lino / idea-influx.ttl
+# 想法说不出来 (blocked-expression): 2 节点 → blocked-expression.md / blocked-expression.lino / blocked-expression.ttl
+# 面对高频易再生的素材 (regenerable-material): 2 节点 → regenerable-material.md / regenerable-material.lino / regenerable-material.ttl
+# 需要快速验证一个想法 (quick-validation): 1 节点 → quick-validation.md / quick-validation.lino / quick-validation.ttl
+# 维护场景要同时保质量与产出 (maintenance-quality): 2 节点 → maintenance-quality.md / maintenance-quality.lino / maintenance-quality.ttl
+# 不系于事件的条目 (loose-entries): 1 节点 → loose-entries.md / loose-entries.lino / loose-entries.ttl
+
+卡住 --responds_to--> 先放下   # 供需双方都卡住 → 目标完成又冒出新需求
