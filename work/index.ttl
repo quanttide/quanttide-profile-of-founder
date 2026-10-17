@@ -90,6 +90,10 @@ pf:new-requirements a pf:IssueGroup ;
     rdfs:label "目标完成又冒出新需求" ;
     pf:source "work/index.md#目标完成又冒出新需求" ;
     pf:nodes 3 .
+pf:mental-fatigue a pf:IssueGroup ;
+    rdfs:label "连续复杂思考、人工校形之后" ;
+    pf:source "work/index.md#连续复杂思考、人工校形之后" ;
+    pf:nodes 2 .
 pf:stuck-both-sides a pf:IssueGroup ;
     rdfs:label "供需双方都卡住" ;
     pf:source "work/index.md#供需双方都卡住" ;
@@ -101,7 +105,7 @@ pf:messy-files a pf:IssueGroup ;
 pf:ai-friction a pf:IssueGroup ;
     rdfs:label "AI 用得不顺手" ;
     pf:source "work/index.md#AI 用得不顺手" ;
-    pf:nodes 3 .
+    pf:nodes 2 .
 pf:transition a pf:IssueGroup ;
     rdfs:label "大转型期" ;
     pf:source "work/index.md#大转型期" ;
@@ -135,3 +139,4 @@ pf:loose-entries a pf:IssueGroup ;
 # 跨组的边（节点定义在各自组的 ttl）
 ########################################
 pf:卡住 pf:responds_to pf:先放下 .
+pf:脱力 pf:responds_to pf:先放下 .

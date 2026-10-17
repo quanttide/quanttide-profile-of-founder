@@ -85,11 +85,11 @@ pf:quote a rdf:Property ;
 pf:发现新需求、与承诺有差距 a pf:Event ;
     rdfs:label "发现新需求、与承诺有差距" ;
     pf:file "triggers.md" ;
-    pf:evokes pf:脱力与落差 ;
+    pf:evokes pf:落差 ;
     pf:responds_to pf:先放下 .
 
-pf:脱力与落差 a pf:Emotion ;
-    rdfs:label "脱力与落差" ;
+pf:落差 a pf:Emotion ;
+    rdfs:label "落差" ;
     pf:file "emotions.md" ;
     pf:responds_to pf:先放下 .
 

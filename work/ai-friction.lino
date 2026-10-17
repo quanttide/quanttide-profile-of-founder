@@ -3,4 +3,3 @@
 # 节点定义见 ai-friction.ttl，条目原文见 ai-friction.md
 
 AI 用得不顺手 --responds_to--> 找上下文差异并显性化
-找上下文差异并显性化 --seeAlso--> 从上下文差异找规则

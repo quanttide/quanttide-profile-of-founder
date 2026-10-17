@@ -89,9 +89,4 @@ pf:AI_用得不顺手 a pf:Event ;
 
 pf:找上下文差异并显性化 a pf:Method ;
     rdfs:label "找上下文差异并显性化" ;
-    pf:file "methods.md" ;
-    rdfs:seeAlso pf:从上下文差异找规则 .
-
-pf:从上下文差异找规则 a pf:Method ;
-    rdfs:label "从上下文差异找规则" ;
     pf:file "methods.md" .
