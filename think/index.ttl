@@ -1,14 +1,14 @@
-# 认知地图 · 知识图谱
+# think · 知识图谱
 #
-# 由 default/profile/index.yaml 转换而来（原文件已删除）。
-# 对象 = 档案条目，按 kind 归入本命名空间下的类；
+# 按事情重组的创始人档案：一个事情一组（pf:Matter），
+# 条目按 kind 归类（Trigger / Event / Emotion / Method / Expression / Value / Anti）；
 # 态射 = 定向关系，用 pf:evokes / pf:responds_to / pf:serves / pf:excludes 表达。
 # 语义签名（起点类 → 终点类）：
-#   evokes       Trigger      → Emotion
-#   responds_to  Trigger/Emotion → Method
+#   evokes       Trigger/Event → Emotion
+#   responds_to  Trigger/Event/Emotion → Method
 #   serves       Method       → Value
 #   excludes     Value        → Anti
-# 数据以 default/profile/ 下各档案为准。
+# 本文件收本体、事情节点与跨组边；组内节点与边见各组 ttl。
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -21,13 +21,14 @@
 
 pf:CognitiveMap a rdfs:Class ;
     rdfs:label "认知地图" ;
-    rdfs:comment "default 集 profile 的跨日期蒸馏索引：对象 + 态射。" .
+    rdfs:comment "创始人 profile 的跨日期蒸馏索引：对象 + 态射。" .
 
 pf:Object a rdfs:Class ;
     rdfs:label "对象" ;
-    rdfs:comment "认知地图上的一个节点，取自 profile 下各档案的条目。" .
+    rdfs:comment "认知地图上的一个节点，取自各事情组的条目。" .
 
 pf:Trigger    a rdfs:Class ; rdfs:subClassOf pf:Object ; rdfs:label "触发点" .
+pf:Event      a rdfs:Class ; rdfs:subClassOf pf:Object ; rdfs:label "事件" .
 pf:Emotion    a rdfs:Class ; rdfs:subClassOf pf:Object ; rdfs:label "情绪" .
 pf:Method     a rdfs:Class ; rdfs:subClassOf pf:Object ; rdfs:label "方法" .
 pf:Expression a rdfs:Class ; rdfs:subClassOf pf:Object ; rdfs:label "表达" .
@@ -40,13 +41,13 @@ pf:Anti       a rdfs:Class ; rdfs:subClassOf pf:Object ; rdfs:label "排除的�
 
 pf:evokes a rdf:Property ;
     rdfs:label "触发" ;
-    rdfs:comment "触发点 → 情绪" ;
+    rdfs:comment "触发点 / 事件 → 情绪" ;
     rdfs:domain pf:Trigger ;
     rdfs:range  pf:Emotion .
 
 pf:responds_to a rdf:Property ;
     rdfs:label "应对" ;
-    rdfs:comment "情境（触发点或情绪）→ 方法" ;
+    rdfs:comment "情境（触发点 / 事件或情绪）→ 方法" ;
     rdfs:range pf:Method .
 
 pf:serves a rdf:Property ;
@@ -62,20 +63,18 @@ pf:excludes a rdf:Property ;
     rdfs:range  pf:Anti .
 
 ########################################
-# 本体：对象属性
+# 本体：事情与对象属性
 ########################################
 
-pf:file a rdf:Property ;
-    rdfs:label "来源文件" ;
-    rdfs:comment "对象所在的 profile 档案" ;
-    rdfs:domain pf:Object ;
-    rdfs:range  xsd:string .
+pf:Matter a rdfs:Class ;
+    rdfs:label "事情" ;
+    rdfs:comment "正在思考或推动的事情，一个事情一组；情境与事件作为条目挂在事情下。" .
 
-pf:group a rdf:Property ;
-    rdfs:label "分组" ;
-    rdfs:comment "方法档案内的二级分组" ;
-    rdfs:domain pf:Method ;
-    rdfs:range  xsd:string .
+pf:nodes a rdf:Property ;
+    rdfs:label "条目数" ;
+    rdfs:comment "本事情组的节点数量，与 index.md 一览表一致" ;
+    rdfs:domain pf:Matter ;
+    rdfs:range  xsd:integer .
 
 pf:quote a rdf:Property ;
     rdfs:label "出处句" ;
@@ -84,54 +83,38 @@ pf:quote a rdf:Property ;
     rdfs:range  xsd:string .
 
 ########################################
-# 触发点 —— profile/triggers.md
+# 事情节点 —— 节点与边见各组 ttl
 ########################################
 
-########################################
-# 议题组 —— 本文件概括框架，节点定义在各组 ttl
-########################################
-
-pf:IssueGroup a rdfs:Class ;
-    rdfs:label "议题组" ;
-    rdfs:comment "个人议题为单位的档案组，见同名 md / lino / ttl。" .
-
-pf:waking-thoughts a pf:IssueGroup ;
-    rdfs:label "睡醒时的千头万绪" ;
-    pf:source "default/index.md#睡醒时的千头万绪" ;
-    pf:nodes 4 .
-pf:strategic-failure a pf:IssueGroup ;
-    rdfs:label "战略失败" ;
-    pf:source "default/index.md#战略失败" ;
+pf:second-brain a pf:Matter ;
+    rdfs:label "第二大脑与档案体系" ;
+    pf:nodes 10 .
+pf:ai-collaboration a pf:Matter ;
+    rdfs:label "与 AI 协作" ;
+    pf:nodes 5 .
+pf:mentoring-standardization a pf:Matter ;
+    rdfs:label "带人与标准化" ;
+    pf:nodes 7 .
+pf:platform-ecosystem a pf:Matter ;
+    rdfs:label "平台与生态" ;
+    pf:nodes 7 .
+pf:industry-education a pf:Matter ;
+    rdfs:label "产教融合与需求众包" ;
+    pf:nodes 0 .
+pf:writing a pf:Matter ;
+    rdfs:label "写作与创作" ;
+    pf:nodes 8 .
+pf:compliance a pf:Matter ;
+    rdfs:label "合规与平台设计" ;
     pf:nodes 3 .
-pf:stalled-progress a pf:IssueGroup ;
-    rdfs:label "进度停滞" ;
-    pf:source "default/index.md#进度停滞" ;
-    pf:nodes 1 .
-pf:ai-as-executor a pf:IssueGroup ;
-    rdfs:label "AI 变成纯粹执行者" ;
-    pf:source "default/index.md#AI 变成纯粹执行者" ;
-    pf:nodes 3 .
-pf:scope-overrun a pf:IssueGroup ;
-    rdfs:label "范围失控" ;
-    pf:source "default/index.md#范围失控" ;
+pf:attention-scope a pf:Matter ;
+    rdfs:label "注意力与范围" ;
     pf:nodes 6 .
-pf:compliance-doubt a pf:IssueGroup ;
-    rdfs:label "不确定是否合规" ;
-    pf:source "default/index.md#不确定是否合规" ;
-    pf:nodes 4 .
-pf:unread-own-content a pf:IssueGroup ;
-    rdfs:label "自己不想看自己写的内容" ;
-    pf:source "default/index.md#自己不想看自己写的内容" ;
-    pf:nodes 2 .
-pf:loose-entries a pf:IssueGroup ;
-    rdfs:label "不系于情境的条目" ;
-    pf:source "default/index.md#不系于情境的条目" ;
-    pf:nodes 17 .
+pf:recovery a pf:Matter ;
+    rdfs:label "状态与恢复" ;
+    pf:nodes 16 .
 
 ########################################
 # 跨组的边（节点定义在各自组的 ttl）
 ########################################
-pf:进度停滞 pf:evokes pf:高压与喘息 .
-pf:进度停滞 pf:responds_to pf:回到虚构世界 .
-pf:自己不想看自己写的内容 pf:evokes pf:疏离 .
-pf:疏离 pf:responds_to pf:修剪上下文 .
+pf:不确定是否合规 pf:evokes pf:疏离 .

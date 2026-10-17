@@ -1,0 +1,42 @@
+# 第二大脑与档案体系 · 知识图谱
+#
+# 本体与态射定义见 index.ttl；条目原文见 second-brain.md，边见 second-brain.lino。
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix pf:   <urn:quanttide-context:default:profile:> .
+
+pf:混乱 a pf:Event ;
+    rdfs:label "混乱" ;
+    pf:evokes pf:崩溃与重整 ;
+    pf:responds_to pf:定关键下一步 .
+
+pf:崩溃与重整 a pf:Emotion ;
+    rdfs:label "崩溃与重整" ;
+    pf:responds_to pf:定关键下一步 .
+
+pf:定关键下一步 a pf:Method ;
+    rdfs:label "定关键下一步" .
+
+pf:产生一个想法就分流 a pf:Method ;
+    rdfs:label "产生一个想法就分流" .
+
+pf:采样胜过穷尽 a pf:Method ;
+    rdfs:label "采样胜过穷尽" ;
+    pf:serves pf:要能积累 .
+
+pf:分权制衡 a pf:Method ;
+    rdfs:label "分权制衡" .
+
+pf:先备数据，再写小应用现场处理 a pf:Method ;
+    rdfs:label "先备数据，再写小应用现场处理" .
+
+pf:要求产出新实习生能看懂 a pf:Expression ;
+    rdfs:label "要求产出'新实习生能看懂'" .
+
+pf:要能积累 a pf:Value ;
+    rdfs:label "要能积累" .
+
+pf:愿意信任超出自己能力的系统 a pf:Value ;
+    rdfs:label "愿意信任超出自己能力的系统" .

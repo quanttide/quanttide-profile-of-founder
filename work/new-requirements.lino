@@ -1,7 +1,0 @@
-# 目标完成又冒出新需求 · link notation
-# 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
-# 节点定义见 new-requirements.ttl，条目原文见 new-requirements.md
-
-发现新需求、与承诺有差距 --evokes--> 落差
-发现新需求、与承诺有差距 --responds_to--> 先放下
-落差 --responds_to--> 先放下

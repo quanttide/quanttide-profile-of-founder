@@ -1,0 +1,19 @@
+# 状态与恢复 · link notation
+# 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
+# 节点定义见 recovery.ttl，条目原文见 recovery.md
+# 「先放下」「回到虚构世界」「高压与喘息」等跨原组的边已随事情重组并入本组
+
+睡醒时的千头万绪 --evokes--> 高压与喘息
+睡醒时的千头万绪 --responds_to--> 装进框架
+高压与喘息 --responds_to--> 补觉与放手
+进度停滞 --evokes--> 高压与喘息
+进度停滞 --responds_to--> 回到虚构世界
+连续做复杂思考、人工校形的活儿之后 --evokes--> 脱力
+发现新需求、与承诺有差距 --evokes--> 落差
+发现新需求、与承诺有差距 --responds_to--> 先放下
+落差 --responds_to--> 先放下
+卡住 --responds_to--> 先放下
+脱力 --responds_to--> 先放下
+战略失败 --evokes--> 信心的底色
+战略失败 --responds_to--> 回到虚构世界
+转型期的消耗 --responds_to--> 承认它是转型期常态

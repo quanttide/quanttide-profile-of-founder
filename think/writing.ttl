@@ -1,0 +1,37 @@
+# 写作与创作 · 知识图谱
+#
+# 本体与态射定义见 index.ttl；条目原文见 writing.md，边见 writing.lino。
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix pf:   <urn:quanttide-context:default:profile:> .
+
+pf:自己不想看自己写的内容 a pf:Trigger ;
+    rdfs:label "自己不想看自己写的内容" ;
+    pf:evokes pf:疏离 ;
+    pf:responds_to pf:修剪上下文 .
+
+pf:疏离 a pf:Emotion ;
+    rdfs:label "疏离" ;
+    pf:responds_to pf:修剪上下文 .
+
+pf:修剪上下文 a pf:Method ;
+    rdfs:label "修剪上下文" ;
+    pf:quote "不断修剪上下文" .
+
+pf:先说出_写出来 a pf:Method ;
+    rdfs:label "先说出/写出来" ;
+    pf:serves pf:说出来才算数 .
+
+pf:说出来才算数 a pf:Value ;
+    rdfs:label "说出来才算数" .
+
+pf:存稿不求工程质量 a pf:Expression ;
+    rdfs:label "存稿不求工程质量" .
+
+pf:私有数据驱动的创作实验 a pf:Expression ;
+    rdfs:label "私有数据驱动的创作实验" .
+
+pf:三本小说的同构倾向 a pf:Expression ;
+    rdfs:label "三本小说的同构倾向" .

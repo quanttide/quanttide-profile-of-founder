@@ -1,0 +1,8 @@
+# 与 AI 协作 · link notation
+# 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
+# 节点定义见 ai-collaboration.ttl，条目原文见 ai-collaboration.md
+
+AI_变成纯粹执行者 --evokes--> 失控与重新掌控
+AI_变成纯粹执行者 --responds_to--> 刻意引导
+失控与重新掌控 --responds_to--> 刻意引导
+AI_用得不顺手 --responds_to--> 找上下文差异并显性化

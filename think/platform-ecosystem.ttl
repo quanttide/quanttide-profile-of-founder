@@ -1,0 +1,29 @@
+# 平台与生态 · 知识图谱
+#
+# 本体与态射定义见 index.ttl；条目原文见 platform-ecosystem.md，边见 platform-ecosystem.lino。
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix pf:   <urn:quanttide-context:default:profile:> .
+
+pf:量潮经济体视角 a pf:Method ;
+    rdfs:label "量潮经济体视角" .
+
+pf:非商业化与商业化切开 a pf:Method ;
+    rdfs:label "非商业化与商业化切开" .
+
+pf:从实验室到平台 a pf:Method ;
+    rdfs:label "从实验室到平台" .
+
+pf:用现有项目做阶梯 a pf:Method ;
+    rdfs:label "用现有项目做阶梯" .
+
+pf:客户视角重组 a pf:Method ;
+    rdfs:label "客户视角重组" .
+
+pf:解决实际问题优于精英社交 a pf:Value ;
+    rdfs:label "解决实际问题优于精英社交" .
+
+pf:利用人性恶赚钱不能长久 a pf:Value ;
+    rdfs:label "利用人性恶赚钱不能长久" .

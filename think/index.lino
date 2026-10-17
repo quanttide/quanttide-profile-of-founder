@@ -1,17 +1,16 @@
 # index · link notation
-# 框架：每组一议题，三格式齐全；本文件只记跨组的边与各组入口。
-# 一行一条边：起点 --态射--> 终点
+# 框架：每组一事情，三格式齐全；本体与态射定义见 index.ttl。
+# 一行一条边：起点 --态射--> 终点；跨组的边只记在本文件与 index.ttl，组内文件不重复。
 
-# 睡醒时的千头万绪 (waking-thoughts): 4 节点 → waking-thoughts.md / waking-thoughts.lino / waking-thoughts.ttl
-# 战略失败 (strategic-failure): 3 节点 → strategic-failure.md / strategic-failure.lino / strategic-failure.ttl
-# 进度停滞 (stalled-progress): 1 节点 → stalled-progress.md / stalled-progress.lino / stalled-progress.ttl
-# AI 变成纯粹执行者 (ai-as-executor): 3 节点 → ai-as-executor.md / ai-as-executor.lino / ai-as-executor.ttl
-# 范围失控 (scope-overrun): 6 节点 → scope-overrun.md / scope-overrun.lino / scope-overrun.ttl
-# 不确定是否合规 (compliance-doubt): 4 节点 → compliance-doubt.md / compliance-doubt.lino / compliance-doubt.ttl
-# 自己不想看自己写的内容 (unread-own-content): 2 节点 → unread-own-content.md / unread-own-content.lino / unread-own-content.ttl
-# 不系于情境的条目 (loose-entries): 17 节点 → loose-entries.md / loose-entries.lino / loose-entries.ttl
+# 第二大脑与档案体系 (second-brain): 10 节点 → second-brain.md / second-brain.lino / second-brain.ttl
+# 与 AI 协作 (ai-collaboration): 5 节点 → ai-collaboration.md / ai-collaboration.lino / ai-collaboration.ttl
+# 带人与标准化 (mentoring-standardization): 7 节点 → mentoring-standardization.md / mentoring-standardization.lino / mentoring-standardization.ttl
+# 平台与生态 (platform-ecosystem): 7 节点 → platform-ecosystem.md / platform-ecosystem.lino / platform-ecosystem.ttl
+# 产教融合与需求众包 (industry-education): 0 节点（只在日志，未入档案） → industry-education.md
+# 写作与创作 (writing): 8 节点 → writing.md / writing.lino / writing.ttl
+# 合规与平台设计 (compliance): 3 节点 → compliance.md / compliance.lino / compliance.ttl
+# 注意力与范围 (attention-scope): 6 节点 → attention-scope.md / attention-scope.lino / attention-scope.ttl
+# 状态与恢复 (recovery): 16 节点 → recovery.md / recovery.lino / recovery.ttl
 
-进度停滞 --evokes--> 高压与喘息   # 进度停滞 → 睡醒时的千头万绪
-进度停滞 --responds_to--> 回到虚构世界   # 进度停滞 → 战略失败
-自己不想看自己写的内容 --evokes--> 疏离   # 自己不想看自己写的内容 → 不确定是否合规
-疏离 --responds_to--> 修剪上下文   # 不确定是否合规 → 自己不想看自己写的内容
+# 跨组的边（节点定义在各自组的 ttl）
+不确定是否合规 --evokes--> 疏离   # 合规与平台设计 → 写作与创作
