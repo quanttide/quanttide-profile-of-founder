@@ -1,7 +1,0 @@
-# 合规与平台设计 · link notation
-# 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
-# 节点定义见 compliance.ttl，条目原文见 compliance.md
-# 跨组的边（不确定是否合规 → 疏离）记在 index.lino
-
-不确定是否合规 --responds_to--> 找合规来套
-找合规来套 --serves--> 合规是刚性边界
