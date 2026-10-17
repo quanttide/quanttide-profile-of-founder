@@ -89,9 +89,6 @@ pf:quote a rdf:Property ;
 pf:second-brain a pf:Matter ;
     rdfs:label "第二大脑与档案体系" ;
     pf:nodes 10 .
-pf:ai-collaboration a pf:Matter ;
-    rdfs:label "与 AI 协作" ;
-    pf:nodes 5 .
 pf:mentoring-standardization a pf:Matter ;
     rdfs:label "带人与标准化" ;
     pf:nodes 7 .

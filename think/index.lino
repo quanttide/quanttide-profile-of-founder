@@ -3,7 +3,6 @@
 # 一行一条边：起点 --态射--> 终点；跨组的边只记在本文件与 index.ttl，组内文件不重复。
 
 # 第二大脑与档案体系 (second-brain): 10 节点 → second-brain.md / second-brain.lino / second-brain.ttl
-# 与 AI 协作 (ai-collaboration): 5 节点 → ai-collaboration.md / ai-collaboration.lino / ai-collaboration.ttl
 # 带人与标准化 (mentoring-standardization): 7 节点 → mentoring-standardization.md / mentoring-standardization.lino / mentoring-standardization.ttl
 # 平台与生态 (platform-ecosystem): 7 节点 → platform-ecosystem.md / platform-ecosystem.lino / platform-ecosystem.ttl
 # 产教融合与需求众包 (industry-education): 0 节点（只在日志，未入档案） → industry-education.md

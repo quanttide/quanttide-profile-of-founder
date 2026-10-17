@@ -4,6 +4,7 @@
 
 ### Removed
 
+- `think/ai-collaboration.*`（md / lino / ttl / html）：认知内容已整理为手册《人机协作》，本组从 think 移出；`index.*` 同步删除该事情节点与注释，守恒基线随之前移
 - `think/`（情境视图）与 `work/`（事件视图）：一并按**事情**重组进新 `think/` 后清理，条目原文基线 `git show fe651c1:think/…`、`git show fe651c1:work/…`
 - `matters/`：当天实验的事情卡视图，转正为 `think/` 各事情组（未发布即并入）
 - `default/`：按情境重组进 `think/` 后清理，原文基线 `git show f4013d1:default/…`（条目原文已在 `think/` 各组）
