@@ -35,15 +35,15 @@
 
 ## 守恒与核对
 
-```bash
-# 基线 fe651c1 = 旧 think/（情境视图）与 work/（事件视图）的最后提交
-# 1 节点（期望 62 = 40 + 22）
-for f in $(git ls-tree -r fe651c1 --name-only think work | grep '\.ttl$'); do git show fe651c1:$f; done | grep ' a pf:' | grep -vc 'IssueGroup'
-grep -h ' a pf:' think/*.ttl | grep -vc 'Matter'
+核对由实验室脚本 `examples/quanttide-founder-lab/scripts/check_think_conservation.py` 完成（Skill: `think-conservation`）：
 
-# 2 边（期望 39 = 26 + 13，其中跨组 1 条记在 index.lino）
-for f in $(git ls-tree -r fe651c1 --name-only think work | grep '\.lino$'); do git show fe651c1:$f; done | grep -cE -- '--(evokes|responds_to|serves|excludes)-->'
-grep -h -E -- '--(evokes|responds_to|serves|excludes)-->' think/*.lino | wc -l
+```bash
+python3 ../../examples/quanttide-founder-lab/scripts/check_think_conservation.py --repo .
 ```
+
+基线 `fe651c1` = 旧 `think/`（情境视图）与 `work/`（事件视图）的最后提交。脚本对比：
+
+- 节点：期望 62 = 40 + 22
+- 边：期望 39 = 26 + 13（其中跨组 1 条记在 `index.lino`）
 
 2026-10-17 实测：62 = 62；39 = 39（跨组 1）。
