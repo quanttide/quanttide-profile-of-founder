@@ -1,9 +1,9 @@
 ---
-name: think-conservation
-description: 核对 think/ 档案的守恒性（节点与边数相对基线 fe651c1 不变）。当新增或重组 think/ 档案、修改 ttl/lino、或需要验证 index.md 的「守恒与核对」时使用。
+name: think-audit
+description: 核对 think/ 档案的守恒性（节点与边数相对基线 fe651c1 不变）。当新增或重组 think/ 档案、修改 ttl/lino、或需要验证 think/README.md 的「守恒与核对」时使用。
 ---
 
-# think-conservation
+# think-audit
 
 调用实验室仓库的脚本，对比基线提交与当前 `think/` 的节点数、边数；两者相等即守恒。
 
