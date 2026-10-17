@@ -1,9 +1,9 @@
 # think · 守恒与核对
 
-核对由实验室脚本 `examples/quanttide-founder-lab/scripts/check_think_conservation.py` 完成（Skill: `think-audit`）。在档案仓库根目录运行：
+核对由 Skill `think-audit` 自带脚本 `.agents/skills/think-audit/scripts/check_think_conservation.py` 完成。在档案仓库根目录运行：
 
 ```bash
-python3 ../../examples/quanttide-founder-lab/scripts/check_think_conservation.py --repo .
+python3 .agents/skills/think-audit/scripts/check_think_conservation.py --repo .
 ```
 
 基线 `fe651c1` = 旧 `think/`（情境视图）与 `work/`（事件视图）的最后提交。脚本对比：

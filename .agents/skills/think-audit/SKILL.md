@@ -5,17 +5,17 @@ description: 核对 think/ 档案的守恒性（节点与边数相对基线 fe65
 
 # think-audit
 
-调用实验室仓库的脚本，对比基线提交与当前 `think/` 的节点数、边数；两者相等即守恒。
+调用 Skill 自带的脚本，对比基线提交与当前 `think/` 的节点数、边数；两者相等即守恒。
 
 ## 用法
 
 在 profile 仓库根目录运行：
 
 ```bash
-python3 ../../examples/quanttide-founder-lab/scripts/check_think_conservation.py --repo .
+python3 .agents/skills/think-audit/scripts/check_think_conservation.py --repo .
 ```
 
-- 脚本在 lab 仓库 `scripts/check_think_conservation.py`，只读，不改档案。
+- 脚本随 Skill 放在 `.agents/skills/think-audit/scripts/check_think_conservation.py`，只读，不改档案。
 - 默认基线 `fe651c1`（旧 `think/` 情境视图与 `work/` 事件视图的最后提交），可加 `--baseline <commit>` 换基线。
 - 退出码：守恒为 0，不等为 1。
 
@@ -37,4 +37,4 @@ python3 ../../examples/quanttide-founder-lab/scripts/check_think_conservation.py
 
 ## 环境边界
 
-脚本位于 monorepo 的 `examples/quanttide-founder-lab/` 下。profile 单独检出（没有同级 `examples/`）时，路径不存在，需在完整 monorepo 工作区运行。
+脚本自带在 Skill 内，profile 仓库独立检出即可运行；只要求本地 git 历史包含基线提交。
