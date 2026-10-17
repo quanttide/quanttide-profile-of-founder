@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """核对 think/ 档案重构的守恒性：基线提交与当前目录的节点数、边数应相等。
 
-用法（在档案仓库根目录运行）：
-    python3 .agents/skills/think-audit/scripts/check_think_conservation.py --repo .
+用法（在档案仓库根目录运行，基线提交见 `think/README.md`）：
+    python3 .agents/skills/think-audit/scripts/check_think_conservation.py --repo . --baseline <commit>
 
 口径（与原 index.md 的手工命令一致）：
-- 节点：基线取 fe651c1 的 think/ 与 work/ 下全部 .ttl，数 ` a pf:` 行并排除 IssueGroup；
+- 节点：基线取基线提交的 think/ 与 work/ 下全部 .ttl，数 ` a pf:` 行并排除 IssueGroup；
   当前取 think/*.ttl，同样数 ` a pf:` 行并排除 Matter（新结构的事情组节点不在基线口径内）。
-- 边：基线取 fe651c1 的 think/ 与 work/ 下全部 .lino，数含四个态射的行；
+- 边：基线取基线提交的 think/ 与 work/ 下全部 .lino，数含四个态射的行；
   当前取 think/*.lino，口径相同（跨组边记在 index.lino）。
 
 只读；相等退出 0，不等退出 1。
@@ -21,10 +21,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-DEFAULT_BASELINE = "fe651c1"
 NODE_RE = re.compile(r" a pf:")
-BASELINE_NODE_EXCLUDE = "IssueGroup"
-CURRENT_NODE_EXCLUDE = "Matter"
+BASELINE_NODE_EXCLUDE = ("IssueGroup", "Matter")
+CURRENT_NODE_EXCLUDE = ("Matter",)
 EDGE_RE = re.compile(r"--(?:evokes|responds_to|serves|excludes)-->")
 
 
@@ -57,12 +56,12 @@ def current_text(repo: Path, suffix: str) -> list[str]:
     return [p.read_text(encoding="utf-8") for p in sorted((repo / "think").glob(f"*{suffix}"))]
 
 
-def count_nodes(texts: list[str], exclude: str) -> int:
+def count_nodes(texts: list[str], excludes: tuple[str, ...]) -> int:
     return sum(
         1
         for text in texts
         for line in text.splitlines()
-        if NODE_RE.search(line) and exclude not in line
+        if NODE_RE.search(line) and not any(exclude in line for exclude in excludes)
     )
 
 
@@ -78,8 +77,8 @@ def count_edges(texts: list[str]) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description="核对 think/ 档案守恒（节点与边数）")
     parser.add_argument("--repo", default=".", help="profile 仓库路径（默认当前目录）")
-    parser.add_argument("--baseline", default=DEFAULT_BASELINE,
-                        help=f"基线提交（默认 {DEFAULT_BASELINE}）")
+    parser.add_argument("--baseline", required=True,
+                        help="基线提交；取值见 think/README.md")
     args = parser.parse_args()
 
     repo = repo_root(Path(args.repo).resolve())
