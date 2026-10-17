@@ -46,5 +46,4 @@
 
 ## 未决
 
-- 档案步自动化：输入端更轻、档案更重，让日常一顺溜处理（日志 2026-10-17）。
-- `quanttide-founder-toolkit` 已标记废弃、推翻重做——它是具体的 Markdown 提炼器，跟不上心智模型的变化（日志 2026-10-17）。
+- 事实性事项的台账在对象档案：档案自动化与专用第二大脑见 [`../work/second-brain.md`](../work/second-brain.md)，toolkit 重做见 [`../work/toolkit-rebuild.md`](../work/toolkit-rebuild.md)。

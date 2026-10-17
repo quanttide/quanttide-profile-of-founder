@@ -35,4 +35,4 @@
 ## 未决
 
 - 方法簇彼此没接边（原 loose 状态），出现对应情境后补触发点。
-- 下一步落地动作见 `industry-education.md`。
+- 落地动作的对象档案见 [`../work/industry-education.md`](../work/industry-education.md)。
