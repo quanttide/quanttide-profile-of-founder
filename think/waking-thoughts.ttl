@@ -1,6 +1,6 @@
 # 认知地图 · 知识图谱
 #
-# 由 meta/（本组）index.yaml 转换而来（原文件已删除）。
+# 由 think/（本组）index.yaml 转换而来（原文件已删除）。
 # 对象 = 档案条目，按 kind 归入本命名空间下的类；
 # 态射 = 定向关系，用 pf:evokes / pf:responds_to / pf:serves / pf:excludes 表达。
 # 语义签名（起点类 → 终点类）：
@@ -8,7 +8,7 @@
 #   responds_to  Trigger/Emotion → Method
 #   serves       Method       → Value
 #   excludes     Value        → Anti
-# 数据以 meta/（本组） 下各档案为准。
+# 数据以 think/（本组） 下各档案为准。
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -87,19 +87,23 @@ pf:quote a rdf:Property ;
 # 触发点 —— profile/triggers.md
 ########################################
 
-pf:AI_变成纯粹执行者 a pf:Trigger ;
-    rdfs:label "AI 变成纯粹执行者" ;
+pf:睡醒时的千头万绪 a pf:Trigger ;
+    rdfs:label "睡醒时的千头万绪" ;
     pf:file "triggers.md" ;
-    pf:evokes pf:失控与重新掌控 ;
-    pf:responds_to pf:刻意引导 .
+    pf:evokes pf:高压与喘息 ;
+    pf:responds_to pf:装进框架 .
 
-pf:失控与重新掌控 a pf:Emotion ;
-    rdfs:label "失控与重新掌控" ;
+pf:高压与喘息 a pf:Emotion ;
+    rdfs:label "高压与喘息" ;
     pf:file "emotions.md" ;
-    pf:responds_to pf:刻意引导 .
+    pf:responds_to pf:补觉与放手 .
 
-pf:刻意引导 a pf:Method ;
-    rdfs:label "刻意引导" ;
-    pf:file "triggers.md" ;
-    pf:quote "刻意用提示词引导" ;
-    rdfs:comment "仅以描述出现，未独立成节" .
+pf:装进框架 a pf:Method ;
+    rdfs:label "装进框架" ;
+    pf:file "methods.md" ;
+    pf:group "应对策略" .
+
+pf:补觉与放手 a pf:Method ;
+    rdfs:label "补觉与放手" ;
+    pf:file "methods.md" ;
+    pf:group "应对策略" .

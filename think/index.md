@@ -1,4 +1,4 @@
-# meta 议题档案 · 框架
+# think 档案框架（按情境重组）
 
 > 从 `default/` 的五类档案按**情境**（触发点）重组——一个情境一组，情绪 / 方法 / 价值挂在它所处的情境下，挂不上情境的进 `loose-entries`（`default/` 已清理，基线 `git show f4013d1:…`）：一议题一组，每组三种格式——`.md` 条目原文、`.lino` 链接记法（一行一条边）、`.ttl` 图谱节点与态射；本组 `index.*` 概括框架。
 
@@ -23,15 +23,15 @@
 # 基线 f4013d1 = default/ 清理前的最后一个提交（原文从 git 取）
 # 1 节点（期望 40 = 40）
 git show f4013d1:default/index.ttl | grep -c ' a pf:'
-grep -h ' a pf:' meta/*.ttl | grep -vc 'IssueGroup'
+grep -h ' a pf:' think/*.ttl | grep -vc 'IssueGroup'
 
 # 2 条目（期望 24 行、下面的循环无输出）
 for f in triggers emotions methods values expressions; do git show f4013d1:default/$f.md; done | grep -c '^## '
-for t in $(for f in triggers emotions methods values expressions; do git show f4013d1:default/$f.md; done | grep "^## " | sed "s/^## //"); do grep -qF "$t" meta/*.md || echo "丢失: $t"; done
+for t in $(for f in triggers emotions methods values expressions; do git show f4013d1:default/$f.md; done | grep "^## " | sed "s/^## //"); do grep -qF "$t" think/*.md || echo "丢失: $t"; done
 
 # 3 边（期望 26 = 26）
 git show f4013d1:default/index.ttl | grep -c -E 'pf:(evokes|responds_to|serves|excludes) pf:'
-grep -h -E -- '--(evokes|responds_to|serves|excludes)-->' meta/*.lino | wc -l
+grep -h -E -- '--(evokes|responds_to|serves|excludes)-->' think/*.lino | wc -l
 ```
 
 2026-10-17 实测：40 = 40；24 行、无丢失；26 = 26（基线 f4013d1）。

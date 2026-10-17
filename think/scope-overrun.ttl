@@ -1,6 +1,6 @@
 # 认知地图 · 知识图谱
 #
-# 由 meta/（本组）index.yaml 转换而来（原文件已删除）。
+# 由 think/（本组）index.yaml 转换而来（原文件已删除）。
 # 对象 = 档案条目，按 kind 归入本命名空间下的类；
 # 态射 = 定向关系，用 pf:evokes / pf:responds_to / pf:serves / pf:excludes 表达。
 # 语义签名（起点类 → 终点类）：
@@ -8,7 +8,7 @@
 #   responds_to  Trigger/Emotion → Method
 #   serves       Method       → Value
 #   excludes     Value        → Anti
-# 数据以 meta/（本组） 下各档案为准。
+# 数据以 think/（本组） 下各档案为准。
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -87,22 +87,39 @@ pf:quote a rdf:Property ;
 # 触发点 —— profile/triggers.md
 ########################################
 
-pf:自己不想看自己写的内容 a pf:Trigger ;
-    rdfs:label "自己不想看自己写的内容" ;
+pf:范围失控 a pf:Trigger ;
+    rdfs:label "范围失控" ;
     pf:file "triggers.md" ;
-    pf:evokes pf:疏离 ;
-    pf:responds_to pf:修剪上下文 .
+    pf:evokes pf:规模焦虑 ;
+    pf:responds_to pf:缩小窗口 .
+
+pf:规模焦虑 a pf:Emotion ;
+    rdfs:label "规模焦虑" ;
+    pf:file "emotions.md" ;
+    pf:responds_to pf:缩小窗口 ;
+    pf:responds_to pf:去建设平台 .
+
+pf:缩小窗口 a pf:Method ;
+    rdfs:label "缩小窗口" ;
+    pf:file "methods.md" ;
+    pf:group "思维框架" ;
+    pf:serves pf:积累感 .
+
+pf:去建设平台 a pf:Method ;
+    rdfs:label "去建设平台" ;
+    pf:file "methods.md" ;
+    pf:group "应对策略" .
+
+pf:积累感 a pf:Value ;
+    rdfs:label "积累感" ;
+    pf:file "values.md" ;
+    pf:excludes pf:消耗型活动 .
 
 ########################################
-# 情绪 —— profile/emotions.md
+# 排除的形态 —— profile/values.md「这条线排除的是」
 ########################################
 
-pf:修剪上下文 a pf:Method ;
-    rdfs:label "修剪上下文" ;
-    pf:file "triggers.md" ;
-    pf:quote "不断修剪上下文" ;
-    rdfs:comment "仅以描述出现，未独立成节" .
-
-########################################
-# 表达 —— profile/expressions.md
-########################################
+pf:消耗型活动 a pf:Anti ;
+    rdfs:label "消耗型活动" ;
+    pf:file "values.md" ;
+    pf:quote "消耗型、不留下资产的活动" .

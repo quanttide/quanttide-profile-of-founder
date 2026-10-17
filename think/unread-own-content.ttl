@@ -1,6 +1,6 @@
 # 认知地图 · 知识图谱
 #
-# 由 meta/（本组）index.yaml 转换而来（原文件已删除）。
+# 由 think/（本组）index.yaml 转换而来（原文件已删除）。
 # 对象 = 档案条目，按 kind 归入本命名空间下的类；
 # 态射 = 定向关系，用 pf:evokes / pf:responds_to / pf:serves / pf:excludes 表达。
 # 语义签名（起点类 → 终点类）：
@@ -8,7 +8,7 @@
 #   responds_to  Trigger/Emotion → Method
 #   serves       Method       → Value
 #   excludes     Value        → Anti
-# 数据以 meta/（本组） 下各档案为准。
+# 数据以 think/（本组） 下各档案为准。
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -87,23 +87,22 @@ pf:quote a rdf:Property ;
 # 触发点 —— profile/triggers.md
 ########################################
 
-pf:不确定是否合规 a pf:Trigger ;
-    rdfs:label "不确定是否合规" ;
+pf:自己不想看自己写的内容 a pf:Trigger ;
+    rdfs:label "自己不想看自己写的内容" ;
     pf:file "triggers.md" ;
     pf:evokes pf:疏离 ;
-    pf:responds_to pf:找合规来套 .
-
-pf:疏离 a pf:Emotion ;
-    rdfs:label "疏离" ;
-    pf:file "emotions.md" ;
     pf:responds_to pf:修剪上下文 .
 
-pf:找合规来套 a pf:Method ;
-    rdfs:label "找合规来套" ;
-    pf:file "methods.md" ;
-    pf:group "应对策略" ;
-    pf:serves pf:合规是刚性边界 .
+########################################
+# 情绪 —— profile/emotions.md
+########################################
 
-pf:合规是刚性边界 a pf:Value ;
-    rdfs:label "合规是刚性边界" ;
-    pf:file "values.md" .
+pf:修剪上下文 a pf:Method ;
+    rdfs:label "修剪上下文" ;
+    pf:file "triggers.md" ;
+    pf:quote "不断修剪上下文" ;
+    rdfs:comment "仅以描述出现，未独立成节" .
+
+########################################
+# 表达 —— profile/expressions.md
+########################################

@@ -1,6 +1,6 @@
 # 认知地图 · 知识图谱
 #
-# 由 meta/（本组）index.yaml 转换而来（原文件已删除）。
+# 由 think/（本组）index.yaml 转换而来（原文件已删除）。
 # 对象 = 档案条目，按 kind 归入本命名空间下的类；
 # 态射 = 定向关系，用 pf:evokes / pf:responds_to / pf:serves / pf:excludes 表达。
 # 语义签名（起点类 → 终点类）：
@@ -8,7 +8,7 @@
 #   responds_to  Trigger/Emotion → Method
 #   serves       Method       → Value
 #   excludes     Value        → Anti
-# 数据以 meta/（本组） 下各档案为准。
+# 数据以 think/（本组） 下各档案为准。
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -87,23 +87,88 @@ pf:quote a rdf:Property ;
 # 触发点 —— profile/triggers.md
 ########################################
 
-pf:睡醒时的千头万绪 a pf:Trigger ;
-    rdfs:label "睡醒时的千头万绪" ;
-    pf:file "triggers.md" ;
-    pf:evokes pf:高压与喘息 ;
-    pf:responds_to pf:装进框架 .
-
-pf:高压与喘息 a pf:Emotion ;
-    rdfs:label "高压与喘息" ;
+pf:厌倦与熟练 a pf:Emotion ;
+    rdfs:label "厌倦与熟练" ;
     pf:file "emotions.md" ;
-    pf:responds_to pf:补觉与放手 .
+    pf:responds_to pf:从依赖个人到依赖规则 .
 
-pf:装进框架 a pf:Method ;
-    rdfs:label "装进框架" ;
+pf:从依赖个人到依赖规则 a pf:Method ;
+    rdfs:label "从依赖个人到依赖规则" ;
+    pf:file "methods.md" ;
+    pf:group "思维框架" .
+
+pf:带人必须有商业收益 a pf:Value ;
+    rdfs:label "带人必须有商业收益" ;
+    pf:file "values.md" ;
+    pf:excludes pf:无收益的一对一投入 .
+
+pf:无收益的一对一投入 a pf:Anti ;
+    rdfs:label "无收益的一对一投入" ;
+    pf:file "values.md" .
+
+pf:交给标准化 a pf:Method ;
+    rdfs:label "交给标准化" ;
+    pf:file "methods.md" ;
+    pf:group "应对策略" ;
+    pf:serves pf:标准化才配走公司流程 .
+
+# 以下两条方法仅以描述出现在 triggers.md，未独立成节
+
+pf:标准化才配走公司流程 a pf:Value ;
+    rdfs:label "标准化才配走公司流程" ;
+    pf:file "values.md" ;
+    pf:excludes pf:个人化表达硬塞进组织流程 .
+
+pf:个人化表达硬塞进组织流程 a pf:Anti ;
+    rdfs:label "个人化表达硬塞进组织流程" ;
+    pf:file "values.md" ;
+    pf:quote "把个人化的表达硬塞进组织流程" .
+
+pf:非商业化与商业化切开 a pf:Method ;
+    rdfs:label "非商业化与商业化切开" ;
+    pf:file "methods.md" ;
+    pf:group "思维框架" .
+
+pf:从实验室到平台 a pf:Method ;
+    rdfs:label "从实验室到平台" ;
+    pf:file "methods.md" ;
+    pf:group "思维框架" .
+
+pf:量潮经济体视角 a pf:Method ;
+    rdfs:label "量潮经济体视角" ;
+    pf:file "methods.md" ;
+    pf:group "思维框架" .
+
+pf:客户视角重组 a pf:Method ;
+    rdfs:label "客户视角重组" ;
+    pf:file "methods.md" ;
+    pf:group "思维框架" .
+
+pf:用现有项目做阶梯 a pf:Method ;
+    rdfs:label "用现有项目做阶梯" ;
     pf:file "methods.md" ;
     pf:group "应对策略" .
 
-pf:补觉与放手 a pf:Method ;
-    rdfs:label "补觉与放手" ;
-    pf:file "methods.md" ;
-    pf:group "应对策略" .
+pf:解决实际问题优于精英社交 a pf:Value ;
+    rdfs:label "解决实际问题优于精英社交" ;
+    pf:file "values.md" .
+
+pf:利用人性恶赚钱不能长久 a pf:Value ;
+    rdfs:label "利用人性恶赚钱不能长久" ;
+    pf:file "values.md" .
+
+pf:私有数据驱动的创作实验 a pf:Expression ;
+    rdfs:label "私有数据驱动的创作实验" ;
+    pf:file "expressions.md" .
+
+pf:存稿不求工程质量 a pf:Expression ;
+    rdfs:label "存稿不求工程质量" ;
+    pf:file "expressions.md" .
+
+pf:三本小说的同构倾向 a pf:Expression ;
+    rdfs:label "三本小说的同构倾向" ;
+    pf:file "expressions.md" .
+
+########################################
+# 价值 —— profile/values.md
+########################################

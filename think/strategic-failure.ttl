@@ -1,6 +1,6 @@
 # 认知地图 · 知识图谱
 #
-# 由 meta/（本组）index.yaml 转换而来（原文件已删除）。
+# 由 think/（本组）index.yaml 转换而来（原文件已删除）。
 # 对象 = 档案条目，按 kind 归入本命名空间下的类；
 # 态射 = 定向关系，用 pf:evokes / pf:responds_to / pf:serves / pf:excludes 表达。
 # 语义签名（起点类 → 终点类）：
@@ -8,7 +8,7 @@
 #   responds_to  Trigger/Emotion → Method
 #   serves       Method       → Value
 #   excludes     Value        → Anti
-# 数据以 meta/（本组） 下各档案为准。
+# 数据以 think/（本组） 下各档案为准。
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -87,8 +87,21 @@ pf:quote a rdf:Property ;
 # 触发点 —— profile/triggers.md
 ########################################
 
-pf:进度停滞 a pf:Trigger ;
-    rdfs:label "进度停滞" ;
+pf:战略失败 a pf:Trigger ;
+    rdfs:label "战略失败" ;
     pf:file "triggers.md" ;
-    pf:evokes pf:高压与喘息 ;
+    pf:evokes pf:信心的底色 ;
     pf:responds_to pf:回到虚构世界 .
+
+pf:信心的底色 a pf:Emotion ;
+    rdfs:label "信心的底色" ;
+    pf:file "emotions.md" .
+
+########################################
+# 方法 —— profile/methods.md
+########################################
+
+pf:回到虚构世界 a pf:Method ;
+    rdfs:label "回到虚构世界" ;
+    pf:file "methods.md" ;
+    pf:group "应对策略" .
