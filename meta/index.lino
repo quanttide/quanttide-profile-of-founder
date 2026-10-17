@@ -2,13 +2,13 @@
 # 框架：每组一议题，三格式齐全；本文件只记跨组的边与各组入口。
 # 一行一条边：起点 --态射--> 终点
 
-# 紧张与高压: 5 节点 → 紧张与高压.md / 紧张与高压.lino / 紧张与高压.ttl
-# 战略失败: 3 节点 → 战略失败.md / 战略失败.lino / 战略失败.ttl
-# AI 关系: 3 节点 → AI 关系.md / AI 关系.lino / AI 关系.ttl
-# 规模的拉扯: 6 节点 → 规模的拉扯.md / 规模的拉扯.lino / 规模的拉扯.ttl
-# 疏离: 6 节点 → 疏离.md / 疏离.lino / 疏离.ttl
-# 厌倦: 4 节点 → 厌倦.md / 厌倦.lino / 厌倦.ttl
-# 价值线: 3 节点 → 价值线.md / 价值线.lino / 价值线.ttl
-# 还散着的条目: 10 节点 → 还散着的条目.md / 还散着的条目.lino / 还散着的条目.ttl
+# 紧张与高压 (tension): 5 节点 → tension.md / tension.lino / tension.ttl
+# 战略失败 (strategic-failure): 3 节点 → strategic-failure.md / strategic-failure.lino / strategic-failure.ttl
+# AI 关系 (ai-relations): 3 节点 → ai-relations.md / ai-relations.lino / ai-relations.ttl
+# 规模的拉扯 (scale): 6 节点 → scale.md / scale.lino / scale.ttl
+# 疏离 (alienation): 6 节点 → alienation.md / alienation.lino / alienation.ttl
+# 厌倦 (weariness): 4 节点 → weariness.md / weariness.lino / weariness.ttl
+# 价值线 (value-lines): 3 节点 → value-lines.md / value-lines.lino / value-lines.ttl
+# 还散着的条目 (loose-entries): 10 节点 → loose-entries.md / loose-entries.lino / loose-entries.ttl
 
 进度停滞 --responds_to--> 回到虚构世界   # 紧张与高压 → 战略失败

@@ -95,35 +95,35 @@ pf:IssueGroup a rdfs:Class ;
     rdfs:label "议题组" ;
     rdfs:comment "个人议题为单位的档案组，见同名 md / lino / ttl。" .
 
-pf:紧张与高压 a pf:IssueGroup ;
+pf:tension a pf:IssueGroup ;
     rdfs:label "紧张与高压" ;
     pf:source "default/index.md#紧张与高压" ;
     pf:nodes 5 .
-pf:战略失败 a pf:IssueGroup ;
+pf:strategic-failure a pf:IssueGroup ;
     rdfs:label "战略失败" ;
     pf:source "default/index.md#战略失败" ;
     pf:nodes 3 .
-pf:AI 关系 a pf:IssueGroup ;
+pf:ai-relations a pf:IssueGroup ;
     rdfs:label "AI 关系" ;
     pf:source "default/index.md#AI 关系" ;
     pf:nodes 3 .
-pf:规模的拉扯 a pf:IssueGroup ;
+pf:scale a pf:IssueGroup ;
     rdfs:label "规模的拉扯" ;
     pf:source "default/index.md#规模的拉扯" ;
     pf:nodes 6 .
-pf:疏离 a pf:IssueGroup ;
+pf:alienation a pf:IssueGroup ;
     rdfs:label "疏离" ;
     pf:source "default/index.md#疏离" ;
     pf:nodes 6 .
-pf:厌倦 a pf:IssueGroup ;
+pf:weariness a pf:IssueGroup ;
     rdfs:label "厌倦" ;
     pf:source "default/index.md#厌倦" ;
     pf:nodes 4 .
-pf:价值线 a pf:IssueGroup ;
+pf:value-lines a pf:IssueGroup ;
     rdfs:label "价值线" ;
     pf:source "default/index.md#价值线" ;
     pf:nodes 3 .
-pf:还散着的条目 a pf:IssueGroup ;
+pf:loose-entries a pf:IssueGroup ;
     rdfs:label "还散着的条目" ;
     pf:source "default/index.md#还散着的条目" ;
     pf:nodes 10 .

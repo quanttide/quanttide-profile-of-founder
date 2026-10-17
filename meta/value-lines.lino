@@ -1,6 +1,6 @@
 # 价值线 · link notation
 # 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
-# 节点定义见 价值线.ttl，条目原文见 价值线.md
+# 节点定义见 value-lines.ttl，条目原文见 value-lines.md
 
 交给标准化 --serves--> 标准化才配走公司流程
 标准化才配走公司流程 --excludes--> 个人化表达硬塞进组织流程

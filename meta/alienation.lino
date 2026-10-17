@@ -1,6 +1,6 @@
 # 疏离 · link notation
 # 一行一条边：起点 --态射--> 终点；态射取自认知地图四个：evokes / responds_to / serves / excludes
-# 节点定义见 疏离.ttl，条目原文见 疏离.md
+# 节点定义见 alienation.ttl，条目原文见 alienation.md
 
 不确定是否合规 --evokes--> 疏离
 不确定是否合规 --responds_to--> 找合规来套
