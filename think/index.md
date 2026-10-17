@@ -11,19 +11,15 @@
 
 ## 事情组一览
 
-| 文件 | 事情 | 已蒸馏到 | 图谱节点 | 组内边 |
-|:--|:--|:--|--:|--:|
-| `second-brain.md` | 第二大脑与档案体系 | 价值 | 10 | 4 |
-| `ai-collaboration.md` | 与 AI 协作 | 方法 | 5 | 4 |
-| `mentoring-standardization.md` | 带人与标准化 | 价值 | 7 | 4 |
-| `platform-ecosystem.md` | 平台与生态 | 价值 | 7 | 0 |
-| `industry-education.md` | 产教融合与需求众包 | 想法 | 0 | 0 |
-| `writing.md` | 写作与创作 | 方法 | 8 | 4 |
-| `compliance.md` | 合规与平台设计 | 价值 | 3 | 2 |
-| `attention-scope.md` | 注意力与范围 | 价值 | 6 | 6 |
-| `recovery.md` | 状态与恢复 | 情境 | 16 | 14 |
-
-合计：9 组 / 图谱节点 62 / 组内边 38 + 跨组边 1（`不确定是否合规 --evokes--> 疏离`，合规与平台设计 → 写作与创作）。
+- `second-brain.md`：第二大脑与档案体系（价值）
+- `ai-collaboration.md`：与 AI 协作（方法）
+- `mentoring-standardization.md`：带人与标准化（价值）
+- `platform-ecosystem.md`：平台与生态（价值）
+- `industry-education.md`：产教融合与需求众包（想法）
+- `writing.md`：写作与创作（方法）
+- `compliance.md`：合规与平台设计（价值）
+- `attention-scope.md`：注意力与范围（价值）
+- `recovery.md`：状态与恢复（情境）
 
 ## 事情的交界
 
