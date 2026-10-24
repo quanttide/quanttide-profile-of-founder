@@ -1,6 +1,6 @@
 # product 分区：需求档案
 
-> `product/` 收需求：`requirement/` 放与 AI 协作中反复出现的差，顶层放具体产品的需求文档。与 `think/`（认知：怎么想）、`work/`（台账：做了什么决定）分工——这里只收需求与对应话术，不记业务事实、不记情绪。
+> `product/` 收需求：`requirement/` 放与 AI 协作中反复出现的差，以及具体产品的需求文档。与 `think/`（认知：怎么想）、`work/`（台账：做了什么决定）分工——这里只收需求与对应话术，不记业务事实、不记情绪。
 
 ## 口径
 
@@ -14,7 +14,7 @@
 
 档案保留 `clr_` id 与原始措辞的摘要；缓存删除后，id 只在这份档案里有意义，用于回溯归档批次。
 
-产品需求文档放在本分区顶层，一产品一档：写要什么、分几层交付、来源，不写实现步骤。
+产品需求文档也放 `requirement/`，一产品一档：写要什么、分几层交付、来源，不写实现步骤。
 
 ## 差档一览
 
@@ -29,7 +29,7 @@
 
 | 产品 | 档 |
 |:--|:--|
-| 小说偏好库 | [`novel-preference-library.md`](novel-preference-library.md) |
+| 小说偏好库 | [`requirement/novel-preference-library.md`](requirement/novel-preference-library.md) |
 
 ## 边界
 

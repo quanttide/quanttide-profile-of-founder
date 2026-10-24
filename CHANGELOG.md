@@ -5,7 +5,7 @@
 ### Changed
 
 - `code/` → `product/`：分区改名，口径从「AI 协作差」扩为「需求档案」——`requirement/` 继续放澄清派生的差档，顶层放具体产品的需求文档
-- `novel-preference-library.md`：自路线图仓 `work/` 退回本分区顶层（产品需求归档案，路线图只留方向与验收）；`int_0KHS` 三条记录的 id 保留在档内
+- `novel-preference-library.md`：自路线图仓 `work/` 退回本分区 `requirement/`（产品需求归档案，路线图只留方向与验收）；`int_0KHS` 三条记录的 id 保留在档内
 - `product/requirement/requirement-framing.md` 删除：三条记录（`clr_79SX`/`clr_WN7Y`/`clr_VDDX`）判为产品需求而非编程需求，迁回本分区顶层 `novel-preference-library.md`；`requirement/` 只留协作差的档
 - `code/intent/` → `product/requirement/`：明确为**持久存储**——本地账本是缓存，整理进档案后可清空；口径改为「每条记录都进档案，单次出现进观察档」，不再把单次差留在账本；归档与清理步骤收在创始人仓的 `product-requirement` Skill
 
