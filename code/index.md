@@ -20,6 +20,9 @@
 |:--|:--|:--|
 | 澄清的形态 | 观察 | [`requirement/clarification-shape.md`](requirement/clarification-shape.md) |
 | 默认值的取舍 | 观察 | [`requirement/default-values.md`](requirement/default-values.md) |
+| 归档的收法 | 观察 | [`requirement/archival-scope.md`](requirement/archival-scope.md) |
+| 需求的定位与分层 | 类型 | [`requirement/requirement-framing.md`](requirement/requirement-framing.md) |
+| 规格与案例的取舍 | 观察 | [`requirement/spec-and-case-scope.md`](requirement/spec-and-case-scope.md) |
 
 ## 边界
 

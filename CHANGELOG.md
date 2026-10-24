@@ -18,6 +18,8 @@
 
 ### Added
 
+- `code/requirement/` 补三档：`archival-scope.md`（归档的收法，`clr_JDHS`）、`requirement-framing.md`（需求的定位与分层，`clr_79SX`/`clr_WN7Y`/`clr_VDDX`，类型档）、`spec-and-case-scope.md`（规格与案例的取舍，`clr_AKQE`）；本地账本七条全部归档后已清空
+
 - `execute/`：新增分区「任务清单」——只列可执行的任务与状态，任务背后的决定与依据仍留在 `work/`；首批两笔（创建 `quanttide-wechat`、`quanttide-create` 第二大脑），自 `data/context/work/TODO.md` 迁入
 - `code/`：新增分区「AI 协作档案」——收与 AI 协作中反复出现的差，一主题一档；口径按出现次数分观察（1 次）/ 类型（≥2 次）/ 规则（已落 `rules.md`），原始条目以 `clr_` id 指回澄清账本不复制原文。首批两档：`code/intent/clarification-shape.md`（澄清的形态）、`code/intent/default-values.md`（默认值的取舍），均处「观察」档，来源 `int_1Z8G` 的 `clr_NHCX`、`clr_M58A`
 - `think/`：按**事情**重组（合并原情境视图与事件视图）——8 组（第二大脑与档案体系 / 带人与标准化 / 平台与生态 / 产教融合与需求众包 / 写作与创作 / 合规与平台设计 / 注意力与范围 / 状态与恢复），每组 `md`（事情卡 + 条目原文）；事情卡记蒸馏程度（想法 → 情境 → 方法 → 价值），只在日志、未入档案的事情也立组（产教融合与需求众包）。
