@@ -1,6 +1,6 @@
 # 平台与生态
 
-> 来源：原 `think/`（情境视图）与 `work/`（事件视图）按**事情**重组，条目原文不改（原文基线 `git show fe651c1:think/…`、`git show fe651c1:work/…`；本组条目均出自 `think/loose-entries.md`）。
+> 来源：原 `think/`（情境视图）与 `work/`（事件视图）按**事情**重组，原文不改（原文基线 `git show fe651c1:think/…`、`git show fe651c1:work/…`；本组均出自 `think/loose-entries.md`）。
 
 已蒸馏到**价值**。方法簇五条（量潮经济体视角、非商业化与商业化切开、从实验室到平台、用现有项目做阶梯、客户视角重组）加两条价值（解决实际问题优于精英社交、利用人性恶赚钱不能长久）。动作入口「去建设平台」挂在 `attention-scope.md` 的范围失控应对里。
 

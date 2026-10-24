@@ -1,8 +1,8 @@
 # 产教融合与需求众包
 
-> 来源：本组尚无档案条目，只记状态与轮廓（来源：日志 `../context/work/journal/2026-10-17.md`）。
+> 来源：本组尚无档案，只记状态与轮廓（来源：日志 `../context/work/journal/2026-10-17.md`）。
 
-**想法**（未入档案）。轮廓、依据与下一步的对象档案见 [`../work/industry-education.md`](../work/industry-education.md)；蒸馏入档后在事情卡中补条目。
+**想法**（未入档案）。轮廓、依据与下一步的对象档案见 [`../work/industry-education.md`](../work/industry-education.md)；蒸馏入档后在事情卡中补记录。
 
 ## 未决
 
