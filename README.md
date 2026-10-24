@@ -10,4 +10,4 @@
 
 `write/` 收创作认知地图与创作档案：卡在什么（困境）、怎么写（方法）、为什么写（动机），入口见 [write/index.md](./write/index.md)。
 
-`code/` 收**与 AI 协作时反复出现的差**：按主题一档，回答「我以为 AI 知道什么、它实际做了什么、下次该用什么话把它拉回来」；来源是澄清账本（`qtfounder-lab` 的 `clarify.json`），按出现次数分观察 / 类型 / 规则三档，原始条目以 `clr_` id 指回账本不复制原文，入口见 [code/index.md](./code/index.md)。
+`product/` 收**需求档案**：`requirement/` 收与 AI 协作时反复出现的差，按主题一档（观察 / 类型 / 规则三档，原始条目以 `clr_` id 指回账本不复制原文）；顶层放具体产品的需求文档。入口见 [product/index.md](./product/index.md)。
