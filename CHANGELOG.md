@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- `code/intent/` → `code/requirement/`：明确为**持久存储**——本地账本是缓存，整理进档案后可清空；口径改为「每条记录都进档案，单次出现进观察档」，不再把单次差留在账本；归档与清理步骤收在创始人仓的 `code-requirement` Skill
+
 ### Removed
 
 - `think/*.lino`、`think/*.ttl`、`think/README.md`、`.agents/skills/think-audit`：图谱层停用，认知归档只保留 Markdown 事情卡与 `index.md` 组列表
