@@ -4,6 +4,7 @@
 
 ### Changed
 
+- `code/requirement/requirement-framing.md` 删除：三条记录（`clr_79SX`/`clr_WN7Y`/`clr_VDDX`）判为产品需求而非编程需求，迁至路线图仓的 `work/novel-preference-library.md`；`code/requirement/` 只留编程需求
 - `code/intent/` → `code/requirement/`：明确为**持久存储**——本地账本是缓存，整理进档案后可清空；口径改为「每条记录都进档案，单次出现进观察档」，不再把单次差留在账本；归档与清理步骤收在创始人仓的 `code-requirement` Skill
 
 ### Removed
@@ -18,7 +19,7 @@
 
 ### Added
 
-- `code/requirement/` 补三档：`archival-scope.md`（归档的收法，`clr_JDHS`）、`requirement-framing.md`（需求的定位与分层，`clr_79SX`/`clr_WN7Y`/`clr_VDDX`，类型档）、`spec-and-case-scope.md`（规格与案例的取舍，`clr_AKQE`）；本地账本七条全部归档后已清空
+- `code/requirement/` 补三档：`archival-scope.md`（归档的收法，`clr_JDHS`）、`spec-and-case-scope.md`（规格与案例的取舍，`clr_AKQE`）；本地账本七条全部归档后已清空
 
 - `execute/`：新增分区「任务清单」——只列可执行的任务与状态，任务背后的决定与依据仍留在 `work/`；首批两笔（创建 `quanttide-wechat`、`quanttide-create` 第二大脑），自 `data/context/work/TODO.md` 迁入
 - `code/`：新增分区「AI 协作档案」——收与 AI 协作中反复出现的差，一主题一档；口径按出现次数分观察（1 次）/ 类型（≥2 次）/ 规则（已落 `rules.md`），原始条目以 `clr_` id 指回澄清账本不复制原文。首批两档：`code/intent/clarification-shape.md`（澄清的形态）、`code/intent/default-values.md`（默认值的取舍），均处「观察」档，来源 `int_1Z8G` 的 `clr_NHCX`、`clr_M58A`
