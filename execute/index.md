@@ -8,3 +8,10 @@
 |:--|:--|:--|
 | 创建 `quanttide-wechat` 第二大脑 | 待办 | `data/context/work/TODO.md` |
 | 创建 `quanttide-create` 创意工作第二大脑（全名 creative-work） | 待办 | `data/context/work/TODO.md` |
+| Agent 工具箱增加 Skill 特性 | 待办 | `data/context/work/TODO.md` |
+| 叙事工程图书馆 | 待办 | `data/context/work/TODO.md` |
+| 明确 write 和 fiction 的领域边界 | 待办 | `data/context/fiction/TODO.md` |
+
+## 相关档案
+
+- [execute.md](./execute.md)：执行领域列表（门店、零售、兵棋、戏剧）。
