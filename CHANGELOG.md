@@ -22,6 +22,7 @@
 
 ### Added
 
+- `execute/index.md`：补一笔已定事项——code 与 product 的领域边界；来源 `data/context/product/TODO.md`
 - `execute/execute.md`：执行领域列表——门店管理、零售管理、兵棋推演、戏剧制作；自 `data/context/work/profile/` 迁入，正文未改
 - `create/laojie.md`：老街探店素材（环境、套餐、偏好）；自 `data/context/create/` 迁入，正文未改
 - `execute/index.md`：补三笔待办——Agent 工具箱增加 Skill 特性、叙事工程图书馆、明确 write 与 fiction 的领域边界；来源 `data/context` 的 TODO

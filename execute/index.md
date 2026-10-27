@@ -11,6 +11,7 @@
 | Agent 工具箱增加 Skill 特性 | 待办 | `data/context/work/TODO.md` |
 | 叙事工程图书馆 | 待办 | `data/context/work/TODO.md` |
 | 明确 write 和 fiction 的领域边界 | 待办 | `data/context/fiction/TODO.md` |
+| 明确 code 和 product 的领域边界 | 已定（见 `data/context/product/README.md`） | `data/context/product/TODO.md` |
 
 ## 相关档案
 
