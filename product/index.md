@@ -31,6 +31,12 @@
 |:--|:--|
 | 小说偏好库 | [`requirement/novel-preference-library.md`](requirement/novel-preference-library.md) |
 
+## code 与 product 的边界
+
+- product：做什么产品、给谁、分几层交付。产品定义、意图与验收标准留在这里。
+- code：怎么写、代码放哪个仓、用什么命令与工具。实现方案归代码资产仓或对应项目仓。
+- 同一件事两边都涉及：定义在 product，实现在 code，互链不复制。
+
 ## 边界
 
 - 差档的主题来自「实际做了什么」这一列，不按日期、不按命令切档。
