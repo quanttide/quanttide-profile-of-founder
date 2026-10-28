@@ -22,6 +22,7 @@
 
 ### Added
 
+- `qtgame-war/`：兵棋游戏设计档案分区——自代码仓 `assets/qtgame-war` 的 `docs/dev-guide/` 迁入跨版本设计共识（`index.md` 分区口径、`core-mechanism.md` 核心机制、`constraints.md` 架构约束与核心/剧本边界清单、`layering.md` 分层结构）；代码仓只留实现与版本计划，设计归档案
 - `product/index.md`：补 code 与 product 的领域边界——product 管做什么、给谁、分几层，code 管怎么写、放哪；定义在 product，实现在 code；自 `data/context/product/README.md` 迁入
 - `execute/index.md`：补一笔已定事项——code 与 product 的领域边界；来源 `data/context/product/TODO.md`
 - `execute/execute.md`：执行领域列表——门店管理、零售管理、兵棋推演、戏剧制作；自 `data/context/work/profile/` 迁入，正文未改
