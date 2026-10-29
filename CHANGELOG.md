@@ -5,6 +5,7 @@
 ### Changed
 
 - `execute/execute.md` 并入 `execute/index.md`：任务表格改为待办列表（完成用 `[x]`），领域列表移入并补 `quanttide-info，information management 量潮信息管理`，原「在考虑多发几篇禁令」一句收为一条待办；`execute/execute.md` 删除
+- `execute/index.md`：领域列表五条改为待办——每条是「创建对应领域第二大脑」，短名对照收进括号，不再单设「领域列表」节
 
 - `media/` → `create/`：分区改名，素材与文案随迁（`create/sijiwei.md` 与 `create/images/`）；文内相对路径不变
 - `code/` → `product/`：分区改名，口径从「AI 协作差」扩为「需求档案」——`requirement/` 继续放澄清派生的差档，顶层放具体产品的需求文档
