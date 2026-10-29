@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- `think/ai-integration.md`：与 AI 的整合协作（方法）——整合循环（抽任务→能力范围内改一轮→返回→反思）与信任转折（敢碰量潮云主站、多窗口并行）；来源 10-28、10-29 日志，`think/index.md` 同步
+
 ### Changed
 
 - `execute/execute.md` 并入 `execute/index.md`：任务表格改为待办列表（完成用 `[x]`），领域列表移入并补 `quanttide-info，information management 量潮信息管理`，原「在考虑多发几篇禁令」一句收为一条待办；`execute/execute.md` 删除

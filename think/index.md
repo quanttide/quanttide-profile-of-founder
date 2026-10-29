@@ -19,6 +19,7 @@
 - `compliance.md`：合规与平台设计（价值）
 - `attention-scope.md`：注意力与范围（价值）
 - `recovery.md`：状态与恢复（情境）
+- `ai-integration.md`：与 AI 的整合协作（方法）
 
 ## 事情的交界
 
