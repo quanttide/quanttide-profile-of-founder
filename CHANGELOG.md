@@ -4,6 +4,8 @@
 
 ### Changed
 
+- `execute/execute.md` 并入 `execute/index.md`：任务表格改为待办列表（完成用 `[x]`），领域列表移入并补 `quanttide-info，information management 量潮信息管理`，原「在考虑多发几篇禁令」一句收为一条待办；`execute/execute.md` 删除
+
 - `media/` → `create/`：分区改名，素材与文案随迁（`create/sijiwei.md` 与 `create/images/`）；文内相对路径不变
 - `code/` → `product/`：分区改名，口径从「AI 协作差」扩为「需求档案」——`requirement/` 继续放澄清派生的差档，顶层放具体产品的需求文档
 - `novel-preference-library.md`：自路线图仓 `work/` 退回本分区 `requirement/`（产品需求归档案，路线图只留方向与验收）；`int_0KHS` 三条记录的 id 保留在档内
