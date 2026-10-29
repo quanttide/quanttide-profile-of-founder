@@ -1,8 +1,4 @@
-# execute 任务清单
-
-> `execute/` 收**待办任务**：回答「现在手上要做哪些事」。与 `work/`（事项台账：做了什么决定、做到哪）分工——这里只列可执行的任务与状态，完成即移出；任务背后的决定与依据仍在 `work/` 对应档案。来源为各分区日志中明确记为待办的内容。
-
-## 待办
+# 待办清单
 
 - [ ] 创建 `quanttide-wechat` 第二大脑（来源：`data/context/work/TODO.md`）
 - [ ] 创建 `quanttide-create` 创意工作第二大脑，全名 creative-work（来源：`data/context/work/TODO.md`）
