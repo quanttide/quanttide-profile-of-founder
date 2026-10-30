@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Removed
+
+- `qtgame-war/` 分区（设计档案 index、core-mechanism、constraints、layering 共 4 篇）迁出为独立仓 `quanttide-profile-of-war-gaming`；README 分区说明同步
+
 ### Added
 
 - `think/ai-integration.md`：与 AI 的整合协作（方法）——整合循环（抽任务→能力范围内改一轮→返回→反思）与信任转折（敢碰量潮云主站、多窗口并行）；来源 10-28、10-29 日志，`think/index.md` 同步
