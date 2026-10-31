@@ -40,16 +40,14 @@
 
 ## 图片
 
-封面用 `images/laojie_10.jpg`，叠字「老街 · 土徽菜 / 甜口不辣，香酥鲈鱼是招牌 / 滁州探店」；保持暖红、木色调，不写价格。
+封面用 `images/laojie_1.jpg`，叠字「老街 · 土徽菜 / 甜口不辣，香酥鲈鱼是招牌 / 滁州探店」；保持暖红、木色调，不写价格。
 
-1. `images/laojie_10.jpg`：满桌菜合影，封面；
-2. `images/laojie_14.jpg`：就餐区与红灯笼；
-3. `images/laojie_15.jpg`：门头「忠都老街土徽菜」与「老街」灯牌；
-4. `images/laojie_13.jpg`：俯拍满桌，兼作菜品预告；
-5. `images/laojie_1.jpg`：香酥鲈鱼；
-6. `images/laojie_3.jpg`：宫保鸡丁；
-7. `images/laojie_4.jpg`：老街炖豆腐；
-8. `images/laojie_7.jpg`：蒜子焖青茄子；
-9. `images/laojie_12.jpg`：西湖牛肉羹。
-
-菜单任务单存 `images/laojie_menu.jpg`，不入正文图，供核对菜名与任务要求。
+1. `images/laojie_1.jpg`：满桌菜合影，封面；
+2. `images/laojie_2.jpg`：就餐区与红灯笼；
+3. `images/laojie_3.jpg`：门头「忠都老街土徽菜」与「老街」灯牌；
+4. `images/laojie_4.jpg`：俯拍满桌，兼作菜品预告；
+5. `images/laojie_5.jpg`：香酥鲈鱼；
+6. `images/laojie_6.jpg`：宫保鸡丁；
+7. `images/laojie_7.jpg`：老街炖豆腐；
+8. `images/laojie_8.jpg`：蒜子焖青茄子；
+9. `images/laojie_9.jpg`：西湖牛肉羹。

@@ -38,16 +38,14 @@
 
 ## 图片
 
-封面用 `images/yishan_17.jpg`，叠字「忆山红 · 江西小馆 / 鲜得很霸道 / 滁州探店」；保持红、木色调，不写价格。
+封面用 `images/yishan_1.jpg`，叠字「忆山红 · 江西小馆 / 鲜得很霸道 / 滁州探店」；保持红、木色调，不写价格。
 
-1. `images/yishan_17.jpg`：满桌菜合影，封面；
-2. `images/yishan_6.jpg`：就餐区与明档厨房；
-3. `images/yishan_4.jpg`：门头「忆山红·江西小馆」；
-4. `images/yishan_1.jpg`：「赣鄱好味」墙画；
-5. `images/yishan_8.jpg`：古法油漫鲈鱼；
-6. `images/yishan_7.jpg`：砂锅蜂窝豆腐；
-7. `images/yishan_11.jpg`：辣炒花甲；
-8. `images/yishan_15.jpg`：外婆菜炒蛋；
-9. `images/yishan_10.jpg`：瓦罐汤。
-
-菜单任务单存 `images/yishan_menu.jpg`，不入正文图，供核对菜名与任务要求。
+1. `images/yishan_1.jpg`：满桌菜合影，封面；
+2. `images/yishan_2.jpg`：就餐区与明档厨房；
+3. `images/yishan_3.jpg`：门头「忆山红·江西小馆」；
+4. `images/yishan_4.jpg`：「赣鄱好味」墙画；
+5. `images/yishan_5.jpg`：古法油漫鲈鱼；
+6. `images/yishan_6.jpg`：砂锅蜂窝豆腐；
+7. `images/yishan_7.jpg`：辣炒花甲；
+8. `images/yishan_8.jpg`：外婆菜炒蛋；
+9. `images/yishan_9.jpg`：瓦罐汤。
