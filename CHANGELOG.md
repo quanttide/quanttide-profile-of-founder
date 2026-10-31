@@ -12,6 +12,8 @@
 
 ### Changed
 
+- `execute/index.md`：七条「创建第二大脑」待办移出至根仓 `quanttide/TODO.md`（建仓是组织层的事）——quanttide-wechat、quanttide-create、quanttide-store、quanttide-retail、quanttide-war、quanttide-drama、quanttide-info；本清单只留单仓内部待办
+
 - `execute/execute.md` 并入 `execute/index.md`：任务表格改为待办列表（完成用 `[x]`），领域列表移入并补 `quanttide-info，information management 量潮信息管理`，原「在考虑多发几篇禁令」一句收为一条待办；`execute/execute.md` 删除
 - `execute/index.md`：领域列表五条改为待办——每条是「创建对应领域第二大脑」，短名对照收进括号，不再单设「领域列表」节
 
