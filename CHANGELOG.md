@@ -8,6 +8,8 @@
 
 ### Added
 
+- `fiction/` 分区：人物设定、外貌描写与两张女主年龄概念图，自 `data/context/fiction/profile/` 按资产契约迁入
+
 - `think/ai-integration.md`：与 AI 的整合协作（方法）——整合循环（抽任务→能力范围内改一轮→返回→反思）与信任转折（敢碰量潮云主站、多窗口并行）；来源 10-28、10-29 日志，`think/index.md` 同步
 
 ### Changed
