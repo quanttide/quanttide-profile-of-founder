@@ -1,5 +1,7 @@
 # CHANGELOG
 
+- `create/` → `media/`：目录改名，素材与文案随迁（`media/sijiwei.md` 与 `media/images/`）
+
 ## [Unreleased]
 
 ### Removed
